@@ -1,0 +1,42 @@
+.matchContainer{
+    @apply
+    w-[72px]
+    h-[73px]
+    bg-white
+    p-[5px]
+    rounded-[10px]
+    flex
+    flex-col
+    items-center
+    gap-[2px]
+
+}
+.flagsWrapper{
+    @apply
+    flex
+    gap-[27px]
+    p-[2px]
+}
+.countriesWrapper{
+    @apply
+    flex
+    gap-[28px]
+}
+.scorsWrapper{
+    @apply
+    flex
+    gap-[17px]
+    
+}
+.country p{
+  @apply
+  text-[10px]
+  font-[400]
+  text-gray
+  pt-[3px]
+
+}
+.score p{
+  @apply 
+  font-[400]
+}

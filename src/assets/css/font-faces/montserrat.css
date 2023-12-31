@@ -1,0 +1,50 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url("./../../fonts/montserrat/ttf/Montserrat-ExtraLight.ttf"), 
+    url("./../../fonts/montserrat/woff2/Montserrat-ExtraLight.woff2");
+    font-style: normal;
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("./../../fonts/montserrat/ttf/Montserrat-Light.ttf"), 
+    url("./../../fonts/montserrat/woff2/Montserrat-Light.woff2");
+    font-style: normal;
+    font-weight: 300;
+}
+@font-face {
+    font-family: "Montserrat";
+    src: url("./../../fonts/montserrat/ttf/Montserrat-Regular.ttf"), 
+    url("./../../fonts/montserrat/woff2/Montserrat-Regular.woff2");
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Montserrat";
+    src: url("./../../fonts/montserrat/ttf/Montserrat-Medium.ttf"), 
+    url("./../../fonts/montserrat/woff2/Montserrat-Medium.woff2");
+    font-style: normal;
+    font-weight: 500;
+}
+@font-face {
+    font-family: "Montserrat";
+    src: url("./../../fonts/montserrat/ttf/Montserrat-SemiBold.ttf"), 
+    url("./../../fonts/montserrat/woff2/Montserrat-SemiBold.woff2");
+    font-style: normal;
+    font-weight: 600;
+}
+@font-face {
+    font-family: "Montserrat";
+    src: url("./../../fonts/montserrat/ttf/Montserrat-Bold.ttf"), 
+    url("./../../fonts/montserrat/woff2/Montserrat-Bold.woff2");
+    font-style: normal;
+    font-weight: 700;
+}
+@font-face {
+    font-family: "Montserrat";
+    src: url("./../../fonts/montserrat/ttf/Montserrat-ExtraBold.ttf"), 
+    url("./../../fonts/montserrat/woff2/Montserrat-ExtraBold.woff2");
+    font-style: normal;
+    font-weight: 800;
+}

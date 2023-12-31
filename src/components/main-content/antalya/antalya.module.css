@@ -1,0 +1,60 @@
+.sectionWrapper {
+  background: url("../../../assets/images/home/bg-antalya.png") round;
+  @apply w-[100%] h-[657px] flex items-center mb-[238px] mt-[202px] relative gap-[379px] md:hidden sm:hidden
+}
+
+.sectionWrapper::before {
+  content: "";
+  background: linear-gradient(91deg, #171717 0%, rgba(33, 33, 33, 0.00) 100%);
+  @apply absolute left-0 top-0 w-full h-full
+}
+
+.leftSide {
+  @apply flex gap-[15px] relative z-[2] pl-[100px]
+}
+
+.multipleImg {
+  @apply w-[36px]
+}
+
+.texts {
+  @apply flex flex-col gap-[82px] -mt-[19px]
+}
+
+.topTexts {
+  @apply flex flex-col
+}
+
+.title {
+  @apply flex gap-[47px] whitespace-nowrap
+}
+
+.helloWrapper p {
+  @apply font-[400] text-[40px] text-white
+}
+
+.textWrapper h1 {
+  @apply font-[400] text-[150px] text-white font-[Ammhenthi] -mt-[36px]
+}
+
+.detail {
+  @apply flex flex-col gap-[24px] -mt-[82px]
+}
+
+.detail p {
+  @apply
+  /* text-[#DDD] */
+  text-gray font-[500] text-[18px] font-['Raleway']
+}
+
+.rightSide {
+  transform: rotateY(180deg);
+  @apply
+  /* w-[544px] */
+  w-[35%] h-[799px] -mt-[147px] absolute flex items-end left-[10%] bottom-0
+}
+
+.rightSide img {
+  @apply max-w-[100%] max-h-full object-contain
+  /* h-auto */
+}

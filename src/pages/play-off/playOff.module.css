@@ -1,0 +1,8 @@
+.PlayOffContent{
+    @apply
+    pt-[86px]
+    flex
+    flex-col
+    items-center
+  }
+  

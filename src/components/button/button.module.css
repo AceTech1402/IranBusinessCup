@@ -1,0 +1,28 @@
+.btn1{
+    @apply
+    rounded-lg
+    text-white
+    w-full
+     max-w-[358px]
+     h-[56px]
+     cursor-pointer
+     flex
+     gap-3
+     items-center
+     justify-center
+
+     
+}
+.btn2{
+    @apply
+    rounded-lg
+    text-white
+    max-w-[358px]
+    w-full
+    h-[48px]
+     cursor-pointer
+     flex
+     gap-3
+     items-center
+     justify-center 
+}

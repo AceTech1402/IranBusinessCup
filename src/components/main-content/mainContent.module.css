@@ -1,0 +1,101 @@
+.main_content_wrapper {
+    @apply
+    w-full
+    
+    flex
+    justify-center
+    items-start
+    flex-col
+    py-[150px]
+    sm:px-[26px]
+}
+.main_content_wrapper .main_content {
+    @apply
+    sm:px-[26px]
+    px-[80px]
+    xl:px-[40px]
+    w-full
+    max-w-[1598px]
+    relative
+}
+.left {
+    @apply
+    absolute
+    -left-[0]
+    w-[36px]
+    h-[136px]
+    top-[14px]
+}
+.top{
+    @apply
+    flex
+    gap-5
+    relative
+    pl-[56px]
+}
+.bottom{
+    @apply
+    flex
+    gap-5
+    mt-[150px]
+    sm:mt-[80px]
+    pl-[56px]
+    relative
+}
+.title{
+    @apply
+    text-priary
+    font-[Bebas-neue]
+    font-bold
+    text-[50px]
+    sm:text-[36px]
+}
+.explain {
+    @apply
+    text-black
+    font-[Raleway]
+    mb-5
+}
+.right{
+    @apply
+    flex
+    flex-col
+    gap-5
+}
+.calender{
+    @apply
+    flex
+    gap-[15px]
+}
+.calender .icon {
+    @apply
+    w-[26px]
+    h-[26px]
+    min-w-[26px]
+    flex
+}
+
+.month{
+    text-transform: capitalize;
+    @apply
+    font-bold
+    font-[Raleway]
+    text-[20px]
+    leading-[30px]
+}
+.cards{
+    @apply
+    flex
+    gap-[56px]
+    w-full
+    mt-[40px]
+    items-start
+    justify-start
+    overflow-y-auto
+    /* flex-wrap */
+    /* bg-slate-600 */
+}
+
+.cards::-webkit-scrollbar {
+    display: none;
+}

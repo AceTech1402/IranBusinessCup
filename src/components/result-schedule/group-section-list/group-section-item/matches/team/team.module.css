@@ -1,0 +1,27 @@
+.team {
+  @apply flex
+  flex-row
+  gap-[20px]
+  items-center
+  text-black
+}
+
+.rowReverse {
+  @apply
+  flex-row-reverse
+}
+
+.flag {
+  @apply w-[30px]
+  h-[30px]
+  rounded-full
+  bg-teamGray
+}
+
+.name {
+  @apply font-bold
+  text-[20px]
+  font-['Raleway']
+  leading-[18px]
+  whitespace-nowrap
+}

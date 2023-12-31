@@ -1,0 +1,250 @@
+.header_wrapper{
+    @apply
+  bg-neutral-900
+    relative
+    z-[2]
+    w-full
+    px-[80px]
+    overflow-hidden
+    xl:px-[40px]
+    sm:px-[26px]
+}
+.header_wrapper .header {
+    @apply
+    w-full
+    max-w-[1598px]
+    flex
+    items-start
+    justify-start
+    lg:flex-col-reverse
+    lg:items-center
+    lg:pb-[20px]
+}
+.header_wrapper .header .text_wrapper {
+    @apply
+    flex
+    flex-col
+    items-start
+    justify-start
+    w-full
+    max-w-[811px]
+    relative
+    z-[2]
+    pt-[12vw]
+    xl:pt-[8vw]
+}
+.header_wrapper .header .text_wrapper .title {
+    @apply
+    mb-[20px]
+    xxl:mb-[10px]
+}
+.header_wrapper .header .text_wrapper .title h1 {
+    @apply
+    text-white  
+    font-bold
+    text-[3.5vw]
+    leading-[6vw]
+    lg:text-[6vw]
+    lg:leading-[9vw]
+}
+
+.header_wrapper .header .text_wrapper .explain {
+    @apply
+    text-white  
+    mb-[50px]
+    leading-[30px]
+    xxl:mb-[30px]
+    /* text-gray */
+}
+.header_wrapper .header .heroMan {
+    @apply
+    flex
+    items-center
+    justify-center
+    w-full
+    max-w-[888px]
+    relative
+    z-[1]
+   lg:max-w-[352px]
+   xs:-right-[26px]
+}
+
+.header_wrapper .header .heroMan::before {
+    content: "";
+    background: url("./../../assets/images/home/bg-hero-image.svg") round;
+    background-size: cover;
+    @apply
+    absolute
+    w-[1104px]
+    h-full
+    -z-[1]
+    top-0
+    bg-no-repeat
+    -right-[9vw]
+    xxl:-right-[16vw]
+    xl:-right-[30vw]
+    lg:w-[376px]
+    lg:right-auto
+}
+
+.header_wrapper .header .heroMan img {
+    @apply
+    w-full
+}
+.introducing{
+    @apply
+    flex
+    flex-col
+    gap-9
+}
+/* .heroMan{
+    @apply
+    w-full
+} */
+
+.business_image_bg{
+    @apply
+    flex
+    justify-center
+    absolute
+    -z-[1]
+    left-[40px]
+    top-[27px]
+    h-full
+    sm:h-[417px]
+    xs:h-[380px]
+}
+/* .businessImg{
+    @apply
+    min-h-fit
+} */
+.Join{
+    @apply
+    text-white
+    font-bold
+    text-sm
+}
+.FollowUS{
+    @apply
+    text-white
+    font-bold
+    transform
+    -rotate-90
+    text-sm
+    flex
+    items-center
+    justify-start
+    whitespace-nowrap
+    p-5
+}
+
+.FollowUS::after {
+    content: "-";
+    @apply
+    text-white
+    text-[14px]
+    font-bold
+    ml-[20px]
+}
+
+.FollowWrapper{
+    text-shadow: 2px 2px 2px #212121;
+    @apply
+    flex
+    flex-col
+    items-center
+    pt-[20vw]
+    xl:pt-[18vw]
+    lg:pt-[24vw]
+    gap-6
+    absolute
+    right-[57px]
+    lg:right-0
+    top-0
+    z-10
+    sm:hidden
+}
+.location_calender_dollar{
+    @apply
+    flex
+    gap-[50px]
+    pt-[3vw]
+    items-start
+    justify-start
+    lg:flex-wrap
+    lg:pt-[5vw]
+}
+
+.location_calender_dollar p {
+    @apply
+    text-white
+    text-[24px]
+    leading-[30px]
+    xl:leading-[20px]
+    xl:text-[18px]
+    font-normal
+    font-[Oswald]
+
+}
+.location_calender_dollar p:first-child {
+    @apply
+    mb-[4px]
+}
+.location_calender_dollar .text {
+    text-shadow: 2px 2px 2px #212121;
+    @apply
+    flex
+    flex-col
+    items-start
+    justify-center
+    whitespace-nowrap
+}
+.location_calender_dollar .icon {
+    @apply
+    w-[68px]
+    min-w-[68px]
+    h-[68px]
+    flex
+    mr-[10px]
+    xl:w-[50px]
+    xl:h-[50px]
+    xl:min-w-[50px]
+}
+.lcdinfo{
+    @apply
+    text-white
+    font-bold
+}
+.lcd{
+    @apply
+    flex
+    gap-2
+    items-center
+}
+.followUsWrapper{
+    @apply
+      w-32
+}
+.ImageWrapper{
+    @apply
+    flex
+    flex-col
+    gap-3
+    mb-[10px]
+}
+
+.ImageWrapper .icon {
+    @apply
+    w-[16px]
+    h-[16px]
+    flex
+    items-center
+    justify-center
+}
+
+
+.ImageWrapper .icon img {
+    @apply
+    max-w-full
+    max-h-full
+}

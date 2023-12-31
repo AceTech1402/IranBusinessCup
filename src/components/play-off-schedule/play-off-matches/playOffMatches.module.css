@@ -1,0 +1,57 @@
+.matchContainer {
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
+    @apply rounded-[15px]
+    /* py-[8px] */
+    /* px-[30px] */
+    bg-white
+    w-[331px]
+    h-[86px]
+    flex
+    flex-row
+    gap-[81px]
+    justify-center
+    items-center
+  }
+  .match {
+    @apply 
+    flex
+    gap-[30px]
+    justify-center
+    text-black
+    items-center
+  }
+  
+  .match > .result {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    @apply font-['Bebas-neue']
+    text-[30px]
+    leading-[29px]
+    flex
+    relative
+    top-[2px]
+    gap-2
+  }
+  
+  .team {
+    @apply flex
+    flex-col
+    gap-[7px]
+    items-center
+    text-black
+  }
+  
+  .flag {
+    @apply w-[30px]
+    h-[30px]
+    rounded-full
+    bg-teamGray
+  }
+  
+  .name {
+    @apply 
+    text-[15px]
+    font-['Raleway']
+    /* leading-[18px]
+    whitespace-nowrap */
+  }

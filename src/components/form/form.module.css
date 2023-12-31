@@ -1,0 +1,95 @@
+.form {
+  @apply flex flex-col items-center pt-20 pb-40 px-[80px] xl:px-[40px] sm:px-[26px]
+}
+
+.formTitle {
+  font-family: "pinar FD VF";
+  font-weight: 800;
+  @apply flex gap-[27px] sm:gap-[14px]
+}
+
+.formTitle img {
+  @apply w-[132px] sm:w-[100px]
+}
+
+.register {
+  font-family: "pinar FD VF";
+  font-weight: 800;
+  @apply text-[50px] text-priary font-extrabold xs:text-[32px] sm:text-[32px] md:text-[32px] xxl:text-[50px] xl:text-[50px] lg:text-[50px]
+}
+
+.inputsWrapper {
+  @apply flex flex-col pt-11 gap-5 max-w-[836px] w-[100%]
+}
+
+.input {
+  @apply flex flex-col w-full
+}
+
+.twoColumn {
+  @apply flex gap-7 xs:flex-col sm:flex-col md:flex-col xxl:flex xl:flex lg:flex
+}
+
+.borderInput {
+  @apply border border-black rounded-md h-[48px] p-[10px] outline-none font-[inherit]
+}
+
+.`:focus {
+  @apply border-priary
+}
+
+.checkInput {
+  @apply flex text-[16px] flex-col items-start justify-center
+}
+
+.checkInput .checkbox_wrapper {
+  @apply flex items-start justify-start relative gap-2 z-[1]
+}
+
+.checkInput .checkbox_wrapper input {
+  @apply
+  /* mr-[15px] */
+  absolute z-[1] left-0 top-0 opacity-0 w-full h-full cursor-pointer
+}
+
+.checkInput .checkbox_wrapper .checkbox {
+  @apply w-[24px] h-[24px] min-w-[24px] rounded-[7px] border-[1px] border-black bg-[#F1F1F1] duration-300 flex items-center justify-center
+}
+
+.checkInput .checkbox_wrapper .checkbox::before {
+  content: "";
+  background: url("./../../assets/images/home/tick.svg") round;
+  @apply w-[13px] h-[9px] opacity-0 duration-300
+}
+
+.checkInput .checkbox_wrapper input:checked~.checkbox {
+  @apply border-priary
+}
+
+.checkInput .checkbox_wrapper input:checked~.checkbox::before {
+  @apply opacity-100
+}
+
+.text {
+  @apply flex justify-center text-[16px]
+}
+
+.textBlue {
+  @apply text-priary ml-1 text-[16px] relative z-[2]
+}
+
+.label {
+  @apply pb-2
+}
+
+.para {
+  @apply text-red-600 font-thin pt-2
+}
+
+.checkButton {
+  @apply flex w-full justify-between gap-y-[40px] xs:flex-col sm:flex-col md:flex-col xxl:flex xl:flex lg:flex
+}
+
+.borderCheckInput {
+  @apply w-[24px] h-[24px] border-[7px]
+}

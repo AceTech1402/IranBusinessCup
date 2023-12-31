@@ -1,0 +1,19 @@
+.groupSectionList {
+  @apply
+  flex
+  flex-col
+  gap-[90px]
+  w-full
+  px-4
+} 
+
+.groupSectionList > section {
+  @apply
+  pb-[90px]
+}
+
+.groupSectionList > section:not(:last-child) {
+  @apply
+  border-b-[2px]
+  border-priary
+}

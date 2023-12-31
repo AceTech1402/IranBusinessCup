@@ -1,0 +1,142 @@
+
+.resultScheduleContent {
+    @apply
+    pt-[86px]
+    flex
+    pb-28
+    items-center
+    gap-[100px]
+    lg:hidden
+    md:hidden
+    sm:hidden
+    xs:hidden
+  }
+  .leftPlays{
+    @apply
+    flex
+    flex-col
+    gap-[170px]
+   
+  }
+  .leftWrapper{
+    @apply
+    flex
+    items-center
+  }
+  .middleWrapper{
+    @apply
+    flex
+    flex-col
+    items-center
+  }
+  .middlePlays{
+    @apply
+    flex
+    gap-[109px]
+  }
+  .Wrapper{
+    @apply
+    flex
+    justify-center
+    items-center
+   
+  }
+  .rightPlays{
+    @apply
+    flex
+    flex-col
+    gap-[170px]
+   
+  }
+  .rightWrapper{
+    @apply
+    flex
+    items-center
+  }
+  .wholePartWrapper{
+    @apply
+    flex
+    flex-col
+    items-center
+    justify-center
+  }
+  .bottomPart{
+    @apply
+    flex
+    gap-8
+  }
+  .matchContainer {
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
+    @apply rounded-[15px]
+    bg-white
+    w-[558px]
+    h-[82px]
+    flex
+    flex-row
+    gap-[81px]
+    justify-center
+    items-center
+    bg-[#1496F5]
+  }
+  .match {
+    @apply 
+    flex
+    gap-[100px]
+    justify-center
+    text-black
+    items-center
+  }
+  
+  .match > .result {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    @apply font-['Bebas-neue']
+    text-[40px]
+    leading-[29px]
+    flex
+    relative
+    top-[2px]
+    gap-2
+    text-white
+    
+  }
+  
+  .team {
+    @apply flex
+    
+    gap-[7px]
+    items-center
+    text-black
+  }
+  
+  .flag {
+    @apply w-[30px]
+    h-[30px]
+    rounded-full
+    bg-teamGray
+  }
+  
+  .name {
+    @apply 
+    text-[15px]
+    font-['Raleway']
+    text-white
+  }
+  .line1{
+    @apply 
+    w-[83px]
+  }
+  .line2{
+    @apply
+    mt-[-123px]
+    w-[259px]
+  }
+  .line3{
+    @apply 
+    w-[83px]
+  }
+  /* .zarbWrapper{
+    @apply 
+    w-[36px]
+    h-[132px]
+  } */

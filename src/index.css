@@ -1,0 +1,284 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("./assets/fonts/montserrat/ttf/Montserrat-ExtraLight.ttf"),
+    url("./assets/fonts/montserrat/woff2/Montserrat-ExtraLight.woff2");
+  font-style: normal;
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("./assets/fonts/montserrat/ttf/Montserrat-Light.ttf"),
+    url("./assets/fonts/montserrat/woff2/Montserrat-Light.woff2");
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("./assets/fonts/montserrat/ttf/Montserrat-Regular.ttf"),
+    url("./assets/fonts/montserrat/woff2/Montserrat-Regular.woff2");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("./assets/fonts/montserrat/ttf/Montserrat-Medium.ttf"),
+    url("./assets/fonts/montserrat/woff2/Montserrat-Medium.woff2");
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("./assets/fonts/montserrat/ttf/Montserrat-SemiBold.ttf"),
+    url("./assets/fonts/montserrat/woff2/Montserrat-SemiBold.woff2");
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("./assets/fonts/montserrat/ttf/Montserrat-Bold.ttf"),
+    url("./assets/fonts/montserrat/woff2/Montserrat-Bold.woff2");
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("./assets/fonts/montserrat/ttf/Montserrat-ExtraBold.ttf"),
+    url("./assets/fonts/montserrat/woff2/Montserrat-ExtraBold.woff2");
+  font-style: normal;
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "Oswald";
+  src: url("./assets/fonts/oswald/ttf/Oswald-Light.ttf"),
+    url("./assets/fonts/oswald/woff2/Oswald-Light.woff2");
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Oswald";
+  src: url("./assets/fonts/oswald/ttf/Oswald-Bold.ttf"),
+    url("./assets/fonts/oswald/woff2/Oswald-Bold.woff2");
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Oswald";
+  src: url("./assets/fonts/oswald/ttf/Oswald-Regular.ttf"),
+    url("./assets/fonts/oswald/woff2/Oswald-Regular.woff2");
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("./assets/fonts/raleway/ttf/Raleway-Thin.ttf"),
+    url("./assets/fonts/raleway/woff2/Raleway-Thin.woff2");
+  font-style: normal;
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("./assets/fonts/raleway/ttf/Raleway-ExtraLight.ttf"),
+    url("./assets/fonts/raleway/woff2/Raleway-ExtraLight.woff2");
+  font-style: normal;
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("./assets/fonts/raleway/ttf/Raleway-Light.ttf"),
+    url("./assets/fonts/raleway/woff2/Raleway-light.woff2");
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("./assets/fonts/raleway/ttf/Raleway-Regular.ttf"),
+    url("./assets/fonts/raleway/woff2/Raleway-Regular.woff2");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("./assets/fonts/raleway/ttf/Raleway-Medium.ttf"),
+    url("./assets/fonts/raleway/woff2/Raleway-Medium.woff2");
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("./assets/fonts/raleway/ttf/Raleway-SemiBold.ttf"),
+    url("./assets/fonts/raleway/woff2/Raleway-SemiBold.woff2");
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("./assets/fonts/raleway/ttf/Raleway-Bold.ttf"),
+    url("./assets/fonts/raleway/woff2/Raleway-Bold.woff2");
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("./assets/fonts/raleway/ttf/Raleway-ExtraBold.ttf"),
+    url("./assets/fonts/raleway/woff2/Raleway-ExtraBold.woff2");
+  font-style: normal;
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("./assets/fonts/raleway/ttf/Raleway-Black.ttf"),
+    url("./assets/fonts/raleway/woff2/Raleway-Black.woff2");
+  font-style: normal;
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: "Bebas-neue";
+  src: url("./assets/fonts/bebas-neue/ttf/BebasNeue-Regular.ttf"),
+    url("./assets/fonts/bebas-neue/woff2/BebasNeue-Regular.woff2");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Ammhenthi';
+  font-style: normal;
+  font-weight: 400;
+  src: url("./assets/fonts/ammhenthi/woff/Ammhenthi.woff");
+}
+
+@font-face {
+  font-family: "noora";
+  src: url("./assets/fonts/noora/Noora Fa-Num 02 Light.ttf"),
+    url("./assets/fonts/noora/web font/woff2/Noora Fa-Num 02 Light.woff2");
+  font-style: normal;
+  font-weight: 300;
+}
+@font-face {
+  font-family: "noora";
+  src: url("./assets/fonts/noora/Noora Fa-Num 03 Regular.ttf"),
+    url("./assets/fonts/noora/web font/woff2/Noora Fa-Num 03 Regular.woff2");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "noora";
+  src: url("./assets/fonts/noora/Noora Fa-Num 04 Bold.ttf"),
+    url("./assets/fonts/noora/web font/woff2/Noora Fa-Num 04 Bold.woff2");
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "noora";
+  src: url("./assets/fonts/noora/Noora Fa-Num 05 ExtraBold.ttf"),
+    url("./assets/fonts/noora/web font/woff2/Noora Fa-Num 05 ExtraBold.woff2");
+  font-style: normal;
+  font-weight: 800;
+}
+@font-face {
+  font-family: "noora";
+  src: url("./assets/fonts/noora/Noora Fa-Num 06 Black.ttf"),
+    url("./assets/fonts/noora/web font/woff2/Noora Fa-Num 06 Black.woff2");
+  font-style: normal;
+  font-weight: 900;
+}
+@font-face {
+  font-family: "pinar";
+  src: url("./assets/fonts/noora/Noora Fa-Num 02 Light.ttf"),
+    url("./assets/fonts/noora/web font/woff2/Noora Fa-Num 02 Light.woff2");
+  font-style: normal;
+  font-weight: 300;
+}
+@font-face {
+  font-family: "pinar";
+  src: url("./assets/fonts/pinar/PINAR-DS3-REGULAR.TTF");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "pinar";
+  src: url("./assets/fonts/pinar/PINAR-DS3-MEDIUM.TTF");
+  font-style: normal;
+  font-weight: 500;
+}
+@font-face {
+  font-family: "pinar";
+  src: url("./assets/fonts/pinar/PINAR-DS3-BOLD.TTF");
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "pinar";
+  src: url("./assets/fonts/pinar/PINAR-DS3-EXTRABOLD.TTF");
+  font-style: normal;
+  font-weight: 800;
+}
+@font-face {
+  font-family: "pinar";
+  src: url("./assets/fonts/pinar/PINAR-DS3-BLACK.TTF");
+  font-style: normal;
+  font-weight: 900;
+}
+@font-face {
+  font-family: "pinar FD VF";
+  src: url("./assets/fonts/pinar/PINAR-FD-VF[WGHT-KSHD-DSTY].TTF");
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-feature-settings: "pnum" on, "lnum" on;
+  direction: rtl;
+  @apply font-["noora"] font-[400] text-black bg-[#F1F1F1]
+}
+
+li {
+  list-style-type: none;
+}
+
+.shape-box {
+  @apply relative z-[1] overflow-hidden
+}
+
+.shape-box.small::before {
+  @apply max-w-[342px] h-[342px]
+}
+
+.shape-box::before {
+  background: url("./assets/images/home/shape-top.svg") round;
+  content: "";
+  @apply absolute top-0 right-0 w-full max-w-[542px] h-[542px] flex bg-cover -z-[1] sm:hidden
+}
+
+.shape-box::after {
+  background: url("./assets/images/home/shape-bottom.svg") round;
+  content: "";
+  @apply absolute bottom-0 left-0 w-full max-w-[363px] h-[363px] flex bg-cover -z-[1] md:hidden sm:hidden
+}

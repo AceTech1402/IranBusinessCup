@@ -1,0 +1,95 @@
+.wrapper{
+  @apply
+  w-[358px]
+  flex-col
+  items-center 
+  pb-[100px]
+  hidden
+  lg:flex
+  md:flex
+  sm:flex
+  xs:flex
+
+}
+.playOff{
+    @apply
+    mt-[80px]
+    flex
+    gap-[55px]
+}
+.topWrapper{
+  @apply
+  flex
+  flex-col
+  items-center
+}
+.leftWrapper {
+  @apply
+  flex
+  flex-col
+  items-center
+}
+.rightWrapper{
+  @apply
+  flex
+  flex-col
+  items-center
+}
+.matches{
+  @apply
+  flex
+  gap-[10px]
+}
+.score{
+  @apply
+  flex
+  flex-col
+  items-center
+}
+.resultWrapper {
+  @apply
+   rounded-[15px]
+  w-[358px]
+  h-[56px]
+  flex
+  flex-row
+  bg-[#1496F5]
+  gap-[30px]
+ items-center
+ p-[15px]
+
+}
+.team{
+  @apply
+  flex
+ items-center
+ gap-[6px]
+}
+.teamName p {
+  @apply
+  text-[14px]
+  font-[700]
+  text-white
+  font-[Raleway]
+}
+.flag{
+  @apply
+  w-[24px]
+  h-[24px]
+}
+.result{
+  @apply
+  flex
+  gap-[10px]
+}
+.result p{
+  @apply
+  text-[20px]
+  font-[400]
+}
+.number p{
+  @apply
+  text-[20px]
+  font-[400]
+  text-white
+}

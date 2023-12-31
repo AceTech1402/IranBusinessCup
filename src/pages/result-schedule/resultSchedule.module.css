@@ -1,0 +1,8 @@
+.resultScheduleContent {
+  @apply
+  pt-[86px]
+  flex
+  flex-col
+  items-center
+  gap-[100px]
+}

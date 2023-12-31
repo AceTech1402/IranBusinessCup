@@ -1,0 +1,102 @@
+.card{
+    @apply
+     p-[25px]
+     rounded-[20px]
+     w-full
+     max-w-[357px]
+     min-w-[357px]
+     bg-white
+}
+.texts{
+    @apply
+    flex
+    flex-col
+    p-3
+    gap-y-[15px]
+}
+
+.texts span{
+    @apply
+    flex
+    items-center
+    justify-start
+}
+
+.texts span .image {
+    @apply
+    w-[24px]
+    min-w-[24px]
+    h-[24px]
+    flex
+    items-center
+    justify-center
+    mr-1
+}
+
+.texts span p {
+    @apply
+    font-[Montserrat]
+    font-[14px]
+}
+
+.imageWrapper{
+    @apply
+    flex
+    justify-center
+}
+
+.imageWrapper img {
+    @apply
+    max-w-full
+    max-h-full
+    object-contain
+}
+
+.timeAndDate{
+    @apply
+    flex
+    justify-between
+}
+.title{
+    @apply
+    text-[30px]
+    leading-[35px]
+    font-normal
+    pt-2
+    font-[Bebas-neue]
+}
+.explain {
+    @apply
+    font-[Raleway]
+    text-[14px]
+    leading-[25px]
+}
+.ReadMoreWrapper{
+    @apply
+    flex
+    flex-row-reverse
+}
+.more{
+    @apply
+    text-priary
+    flex
+    items-center
+    justify-start
+    cursor-pointer
+}
+
+.more .icon {
+    @apply
+    w-[12px]
+    flex
+    ml-[12px]
+    items-center
+    justify-center
+}
+
+.more .icon img {
+    @apply
+    max-w-full
+    max-h-full
+    object-contain
+}

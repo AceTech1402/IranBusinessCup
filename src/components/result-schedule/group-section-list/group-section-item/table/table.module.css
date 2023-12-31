@@ -1,0 +1,120 @@
+.tableContainer {
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
+  @apply 
+  px-[35px]
+  pt-[34px]
+  pb-[41px]
+  w-full
+  max-w-[760px]
+  bg-white
+  rounded-[20px];
+}
+
+.groupName {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  @apply font-['Bebas-neue']
+  text-[34px]
+  leading-[34px]
+  pb-[13px]
+  border-b-[2px]
+  border-priary;
+}
+
+.table {
+  @apply w-full
+}
+
+.tags {
+  /* color: rgba(255, 255, 255, 0.5); */
+  @apply text-gary
+  font-['Raleway']
+  font-semibold
+  text-[20px]
+  pt-[23px]
+  flex
+  flex-row
+  justify-between
+  items-center
+  leading-[29px]
+}
+
+.tags > th {
+  @apply text-[25px]
+  font-semibold
+}
+
+.statsTags {
+  @apply flex
+  flex-row
+  gap-[60px]
+}
+
+.statsTags > th {
+  @apply
+  font-semibold
+}
+
+.teams {
+  @apply text-darkGray
+  flex
+  flex-col
+  pt-[28px]
+  gap-[28px]
+}
+
+.team {
+  /* list-style: decimal; */
+  @apply flex
+  flex-row
+  justify-between
+}
+
+.nameFlag {
+  @apply flex
+  flex-row
+  items-center
+  font-['Raleway']
+  font-normal
+  leading-[21px]
+  text-[18px]
+  gap-3
+}
+
+/* .nameFlag > td {
+  @apply leading-[13px];
+} */
+
+.flag {
+  @apply w-[20px]
+  h-[20px]
+  rounded-full
+  bg-teamGray;
+}
+
+.stats {
+  font-family: Montserrat;
+  @apply flex
+  flex-row
+  gap-[60px]
+  /* xs:gap-[60px] */
+  font-light
+  text-[20px]
+  leading-[21px]
+  text-darkGray;
+}
+
+.wins {
+  @apply w-[21.07px]
+  text-center;
+}
+
+.lose {
+  @apply w-[11.7px]
+  text-center;
+}
+
+.points {
+  @apply w-[37.1px]
+  text-center;
+}

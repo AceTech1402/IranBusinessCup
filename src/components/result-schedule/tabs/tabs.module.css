@@ -1,0 +1,19 @@
+.tabs {
+  @apply
+  pt-[102px]
+  flex
+  gap-[48px]
+}
+.active{
+  @apply
+  text-priary
+}
+/* .navbar.dark ul li a {
+  @apply
+  text-black
+}
+
+.navbar ul li a.active {
+  @apply
+  text-priary
+} */

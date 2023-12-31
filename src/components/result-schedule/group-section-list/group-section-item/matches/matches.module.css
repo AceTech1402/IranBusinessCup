@@ -1,0 +1,70 @@
+.matches {
+  @apply w-full
+  max-w-[740px]
+  flex
+  flex-col
+  gap-[66px]
+}
+
+.matchContainer {
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
+  @apply rounded-[15px]
+  py-[25px]
+  px-[30px]
+  bg-white
+  /* h-[34px] */
+  w-full
+  max-w-[740px]
+  flex
+  flex-row
+  gap-[81px]
+  justify-center
+  items-center
+  /* float-right */
+}
+
+.match {
+  @apply flex
+  flex-row
+  gap-[50px]
+  justify-center
+  text-black
+  items-center;
+}
+
+.match > .result {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  @apply font-['Bebas-neue']
+  text-[34px]
+  leading-[29px]
+  flex
+  flex-row
+  gap-[22px]
+  relative
+  top-[2px]
+}
+
+.time {
+  @apply flex
+  gap-[10px]
+  items-center
+  text-gary
+  h-[28px]
+}
+
+.time > .clock {
+  @apply
+  h-[24px]
+  w-[24px]
+}
+
+.time > .txt {
+  letter-spacing: 0.56px;
+  @apply
+  text-[28px]
+  font-['Bebas-neue']
+  leading-normal
+  relative
+  top-[2px]
+}

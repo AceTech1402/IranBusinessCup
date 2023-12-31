@@ -1,0 +1,71 @@
+.sectionWrapper{
+  @apply
+  w-[100%]
+  flex-col
+  mt-[65px]
+  hidden
+  md:flex
+  sm:flex
+  xs:flex
+}
+.textsWrapper{
+ @apply
+ flex
+ flex-col
+ gap-[23px]
+ pt-[77px]
+ pl-[18px]
+ pr-[3px]
+ w-[100%]
+ items-center
+}
+.topWrapper{
+  @apply
+  flex
+  gap-[9px]
+}
+.title{
+  @apply
+  flex
+  gap-[15px]
+  -mt-[15px]
+  whitespace-nowrap
+}
+.sayHello p{
+  @apply
+  font-[400]
+  text-[28px]
+  text-priary
+}
+.textWrapper h1{
+  @apply
+  font-[400]
+  text-[83px]
+  text-priary
+  font-[Ammhenthi]
+  -mt-[38px]
+}
+.multipleWrapper{
+  @apply
+  w-[18px]
+  -mb-[20px]
+
+}
+.detail p{
+  @apply
+  text-black
+  font-[500]
+  text-[14px]
+  font-['Raleway']
+}
+.imgWrapper img{
+  @apply
+  w-[100%]
+}
+.button{
+  @apply
+  w-[100%]
+  flex
+ justify-center
+ 
+}

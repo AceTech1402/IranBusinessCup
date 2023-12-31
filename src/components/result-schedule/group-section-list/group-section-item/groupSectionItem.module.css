@@ -1,0 +1,11 @@
+.groupItem {
+  @apply
+  flex
+  flex-row
+  justify-center
+  items-center
+  gap-[100px]
+  mx-auto
+  w-full
+  max-w-[1600px]
+}

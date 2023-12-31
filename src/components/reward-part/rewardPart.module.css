@@ -1,0 +1,111 @@
+.rewardPart {
+  @apply flex gap-8 items-center justify-between bg-neutral-900 overflow-hidden px-[80px] lg:flex-col-reverse lg:items-center lg:pb-[20px] xxl:flex xl:flex lg:flex
+}
+
+.left {
+  @apply flex gap-5
+}
+
+.title {
+  @apply text-priary font-extrabold font-["pinar"]
+  /* text-3xl */
+  text-[50px] sm:text-[36px]
+}
+
+.texts {
+  @apply flex flex-col gap-5
+}
+
+.text {
+  @apply text-white text-[18px]
+}
+
+.Multiple {
+  @apply min-w-fit
+}
+
+.right {
+  @apply flex items-center justify-center w-full max-w-[888px] xs:max-w-[200px] relative z-[1]
+  /* overflow-hidden */
+}
+
+.right::before {
+  content: "";
+  background: url("./../../assets/images/home/bg-reward-image.svg") round;
+  background-size: contain;
+  background-position: 50%;
+  @apply absolute w-[1104px] h-full -z-[1] top-0 bg-no-repeat
+  /* lg:w-[100%] */
+  xs:right-auto xs:bg-cover xs:w-[400px]
+}
+
+.left ul {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin-top: 40px;
+}
+
+.left ul li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+}
+
+.left ul li .rewardTitle {
+  font-family: "pinar FD VF";
+  @apply text-white font-light
+}
+
+.left ul li .rewardTitle p {
+  position: relative;
+  font-weight: 300;
+}
+
+.left ul li .rewardTitle p:nth-child(2) {
+  top: -36px;
+  right: 16px;
+}
+
+.left ul li .description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  @apply text-white
+}
+
+.left ul li .description .top {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: "pinar FD VF";
+  gap: 20px;
+}
+
+.left ul li .description .top>p {
+  position: relative;
+  z-index: 1;
+  font-size: 80px;
+  font-family: "pinar FD VF";
+  font-weight: 800;
+}
+
+.left ul li .description .top>p.active::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 90px;
+  height: 19px;
+  border-radius: 2px;
+  @apply bg-priary bottom-0 top-0 m-auto
+}
+
+.left ul li .description .bottom {
+  position: relative;
+  font-family: "pinar";
+  top: -30px;
+}
