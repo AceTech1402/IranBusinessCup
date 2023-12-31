@@ -34,7 +34,7 @@
   @apply border border-black rounded-md h-[48px] p-[10px] outline-none font-[inherit]
 }
 
-.`:focus {
+.borderInput:focus {
   @apply border-priary
 }
 
