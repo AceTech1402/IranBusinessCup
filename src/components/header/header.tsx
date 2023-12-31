@@ -25,73 +25,26 @@ export const Header = () => {
           <div className={styles.header}>
             <div className={styles.text_wrapper}>
               <div className={styles.title}>
-                <h1>BE FEARLESS BUSINESSMAN AN ATHLETHE SAME</h1>
+                <h1>فوتبال بازی کسب و کارتو گسترش بده</h1>
               </div>
               <div className={styles.explain}>
                 <p>
-                  A Certified Running Coach And Personal Trainer For Over A
-                  Decade,I've helped Thousands Of Runners Through 1-1
-                  personalized Coaching And Fitness Club
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپرررر.
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپرررر
                 </p>
               </div>
               <Button
                 prevent={true}
                 linkto={"#register"}
-                icon={true}
+                // icon={true}
                 btnColor={"#21B891"}
               >
-                <p>REGISTER YOUR TEAM</p>
+                <p>ثبت نام</p>
               </Button>
-              <div className={styles.location_calender_dollar}>
-                <span className={styles.lcd}>
-                  <div className={styles.icon}>
-                    <img src={CalendarIcon} />
-                  </div>
-                  <div className={styles.text}>
-                    <p className={styles.lcdinfo}>2ND SEPT</p>
-                    <p>10AM</p>
-                  </div>
-                </span>
-                <span className={styles.lcd}>
-                  <div className={styles.icon}>
-                    <img src={MapIcon} />
-                  </div>
-                  <div className={styles.text}>
-                    <p className={styles.lcdinfo}>LOCATION</p>
-                    <p>VIENNA</p>
-                  </div>
-                </span>
-                <span className={styles.lcd}>
-                  <div className={styles.icon}>
-                    <img src={DollarIcon} />
-                  </div>
-                  <div className={styles.text}>
-                    <p className={styles.lcdinfo}>ENTER PRICE</p>
-                    <p>599 EURO</p>
-                  </div>
-                </span>
-              </div>
             </div>
             <div className={styles.heroMan}>
               <img src={HeaderImage} />
             </div>
-          </div>
-        </div>
-
-        <div className={styles.FollowWrapper}>
-          <div className={styles.ImageWrapper}>
-            <a href="#" className={styles.icon}>
-              <img src={TwitterIcon} />
-            </a>
-            <a href="#" className={styles.icon}>
-              <img src={InstagramIcon} />
-            </a>
-            <a href="#" className={styles.icon}>
-              <img src={FacebookIcon} />
-            </a>
-          </div>
-          <div className={styles.followUsWrapper}>
-            <p className={styles.FollowUS}>FOLLOW US</p>
           </div>
         </div>
       </div>

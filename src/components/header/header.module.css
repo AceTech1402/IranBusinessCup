@@ -27,7 +27,7 @@
     items-start
     justify-start
     w-full
-    max-w-[811px]
+    max-w-[554px]
     relative
     z-[2]
     pt-[12vw]
@@ -39,9 +39,10 @@
     xxl:mb-[10px]
 }
 .header_wrapper .header .text_wrapper .title h1 {
+  font-family: "pinar FD VF";
     @apply
-    text-white  
-    font-bold
+    text-white
+    font-semibold
     text-[3.5vw]
     leading-[6vw]
     lg:text-[6vw]

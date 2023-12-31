@@ -36,6 +36,7 @@ const Navbar = () => {
         >
           <NavLink to={paths.HOME} className={styles.logo}>
             <img src={!navBarDrak.includes(path) ? LogoDark : Logo} />
+            <p>بیزینس لیگ ایران</p>
           </NavLink>
           <div
             className={styles.button_open_menu}
@@ -79,7 +80,7 @@ const Navbar = () => {
                       />
                     </svg>
                   </div>
-                  <p>HOME</p>
+                  <p>خانه</p>
                 </NavLink>
               </li>
               <li>
@@ -174,7 +175,7 @@ const Navbar = () => {
                       />
                     </svg>
                   </div>
-                  <p>RESULT/SCHEDULE</p>
+                  <p>نتیج / برنامه بازی</p>
                 </NavLink>
               </li>
               <li className={`${styles.last}`}>
@@ -201,7 +202,7 @@ const Navbar = () => {
                       />
                     </svg>
                   </div>
-                  <p>REGISTER TEAM</p>
+                  <p>درباره ما</p>
                 </HashLink>
               </li>
             </ul>

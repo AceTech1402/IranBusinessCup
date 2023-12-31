@@ -1,7 +1,6 @@
 .main_content_wrapper {
     @apply
     w-full
-    
     flex
     justify-center
     items-start

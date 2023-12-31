@@ -67,7 +67,7 @@
     @apply
     w-full
     flex
-    gap-[20px]
+    gap-[48px]
     items-center
     justify-start
     md:flex-col
@@ -120,18 +120,21 @@
     stroke-white
 }
 .navbar .logo {
+  white-space: nowrap;
     @apply
-    w-[95px]
     flex
     items-center
     justify-center
+    text-white
+    gap-2
     sm:w-[63px]
 }
 
 .navbar .logo img {
     @apply
-    max-w-full
-    max-h-full
+    min-w-[48px]
+    w-[48px]
+    h-[48px]
     object-contain
 }
 
@@ -143,6 +146,7 @@
 .navbar ul li a.active {
     @apply
     !text-priary
+    font-extrabold
 }
 
 .navbar ul li a.active .image svg path {

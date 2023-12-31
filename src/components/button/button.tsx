@@ -39,20 +39,6 @@ const Button: React.FC<proptsType> = ({
             <img src={ArrowRightIcon} />
           </div>
         </HashLink>
-      ) : icon ? (
-        <>
-          <button
-            className={styles.btn1}
-            type={type}
-            style={{ backgroundColor: btnColor }}
-            onClick={onClick}
-          >
-            {children}
-            <div className={styles.icon}>
-              <img src={ArrowRightIcon} />
-            </div>
-          </button>
-        </>
       ) : (
         <button
           className={styles.btn2}

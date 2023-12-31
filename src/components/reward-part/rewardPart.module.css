@@ -1,5 +1,5 @@
 .rewardPart {
-  @apply flex gap-8 items-center justify-between bg-neutral-900 overflow-hidden px-[80px] lg:flex-col-reverse lg:items-center lg:pb-[20px] xxl:flex xl:flex lg:flex
+  @apply flex gap-8 items-center justify-between bg-neutral-900 overflow-hidden px-[80px] lg:flex-col-reverse lg:items-center lg:pb-[20px] xxl:flex xl:flex lg:flex sm:px-[10px]
 }
 
 .left {
@@ -52,6 +52,7 @@
   justify-content: flex-start;
   align-items: center;
   gap: 30px;
+  white-space: nowrap;
 }
 
 .left ul li .rewardTitle {
@@ -108,4 +109,10 @@
   position: relative;
   font-family: "pinar";
   top: -30px;
+}
+
+@media screen and (max-width: 500px) {
+  .left ul li {
+    white-space: normal;
+  }
 }
