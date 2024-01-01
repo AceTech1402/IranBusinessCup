@@ -1,9 +1,10 @@
 import classes from "./footer.module.css";
 
-import LogoSommerCup from "./../../assets/images/home/logo.svg";
+import logoWithName from "./../../assets/images/home/logo-with-name.svg";
 import { NavLink } from "react-router-dom";
 import SmsIcon from "./../../assets/images/home/sms.svg";
 import LocationIcon from "./../../assets/images/home/location.svg";
+import call from './../../assets/images/home/call.svg';
 interface ItemsType {
   id: number;
   text: string;
@@ -21,20 +22,18 @@ const ItemsFooter: ItemsFooterType[] = [
     id: 1,
     title: "Get In Touch",
     items: [
-      { id: 1, text: "Kontakt", link: "https://goldensports.at/#contactus" },
-      { id: 2, text: "Impressum", link: "https://goldensports.at/impressum" },
-      { id: 3, text: " Newsletter" },
-      { id: 4, text: " Feedback" },
+      { id: 1, text: "درباره ما", link: "https://goldensports.at/#contactus" },
+      { id: 2, text: "ارتباط با ما", link: "https://goldensports.at/impressum" },
+      { id: 3, text: " نتایج/برنامه بازی" },
+      { id: 4, text: " خانه" },
     ],
   },
   {
     id: 2,
     title: "Über die Business League",
     items: [
-      { id: 1, text: "Geschichte" },
-      { id: 2, text: "Über uns" },
-      { id: 3, text: " Das Team", },
-      { id: 4, text: " Golden Sports Events", link: "https://goldensports.at/events" },
+      { id: 1, text: "قوانین بازی" },
+      { id: 2, text: "قوانین ثبت نام" },
     ],
   },
 ];
@@ -42,13 +41,14 @@ const ItemsFooter: ItemsFooterType[] = [
 const cantactus = [
   {
     id: 1,
-    title: "Stay in touch!",
+    title: "ارتباط  با  ما",
     items: [
-      { id: 1, icon: SmsIcon, text: "Support@goldensports.at" },
+      { id: 1, icon: call, text: '02144464914' },
+      { id: 2, icon: SmsIcon, text: "Support@goldensports.at" },
       {
-        id: 2,
+        id: 3,
         icon: LocationIcon,
-        text: "Maulbertschgasse 7/5, 1190 Wien, Austria",
+        text: "جنت آباد مرکزی",
       },
     ],
   },
@@ -62,38 +62,22 @@ const Footer = () => {
           <div className={classes.items}>
             <div className={classes.item_start}>
               <div className={classes.logo_wrapper}>
-                <div className={classes.logo}>
-                  <img src={LogoSommerCup} />
-                </div>
-                {/* <div className={classes.text}>
-                  <p>Summer Cup</p>
-                </div> */}
-              </div>
-              <div className={classes.agb}>
-                <NavLink
-                  to="https://www.goldensports.at/events-agb"
-                  target="_blank"
-                >
-                  Events AGB
-                </NavLink>
+                <img src={logoWithName} />
               </div>
             </div>
           </div>
           {ItemsFooter.map((item) => (
-            <div className={classes.items} key={item.id}>
-              <div className={classes.title}>
-                <p>{item.title}</p>
-              </div>
-              <ul>
+              <ul className={classes.items} key={item.id}>
                 {item.items.map((text) => (
-                  <li key={text.id}>
-                    {
-                      text.link  ? (<NavLink to={text.link}>{text.text}</NavLink>) : (<p>{text.text}</p>)
-                    }
+                  <li className={classes.item} key={text.id}>
+                    {text.link ? (
+                      <NavLink to={text.link}>{text.text}</NavLink>
+                    ) : (
+                      <p>{text.text}</p>
+                    )}
                   </li>
                 ))}
               </ul>
-            </div>
           ))}
         </div>
         <div className={classes.items_right}>
@@ -102,9 +86,9 @@ const Footer = () => {
               <div className={classes.title}>
                 <p>{item.title}</p>
               </div>
-              <ul>
+              <ul className={classes.contactUsItems}>
                 {item.items.map((txt) => (
-                  <li key={txt.id}>
+                  <li key={txt.id} className={classes.item}>
                     <div className={classes.icon}>
                       <img src={txt.icon} />
                     </div>
@@ -114,6 +98,9 @@ const Footer = () => {
                   </li>
                 ))}
               </ul>
+              {/* <div className={classes.socials}>
+                
+              </div> */}
             </div>
           ))}
         </div>
