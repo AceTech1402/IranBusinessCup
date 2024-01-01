@@ -22,7 +22,6 @@ const Button: React.FC<proptsType> = ({
   type,
   // disabled = false,
   btnColor,
-  icon = false,
   onClick,
 }) => {
   return (
@@ -35,9 +34,6 @@ const Button: React.FC<proptsType> = ({
           smooth
         >
           {children}
-          <div className={styles.icon}>
-            <img src={ArrowRightIcon} />
-          </div>
         </HashLink>
       ) : (
         <button

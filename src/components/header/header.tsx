@@ -36,7 +36,6 @@ export const Header = () => {
               <Button
                 prevent={true}
                 linkto={"#register"}
-                // icon={true}
                 btnColor={"#21B891"}
               >
                 <p>ثبت نام</p>

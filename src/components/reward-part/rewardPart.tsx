@@ -4,6 +4,7 @@ import styles from "./rewardPart.module.css";
 import EuroCupImage from "./../../assets/images/home/euroCup.png";
 import CupImage from "./../../assets/images/home/cup.png";
 import ZarbdarImage from "./../../assets/images/home/Group40.png";
+import { XThreeIcon } from "../svgs/svgs";
 
 const RewardPart = () => {
   const rewards = [
@@ -42,7 +43,7 @@ const RewardPart = () => {
       <div className={styles.rewardPart}>
         <div className={styles.left}>
           <div className={styles.Multiple}>
-            <img src={ZarbdarImage} />
+            <XThreeIcon />
           </div>
           <div className={styles.texts}>
             <h2 className={styles.title}>جایزه تیم های برتر</h2>

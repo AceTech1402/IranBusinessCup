@@ -2,19 +2,21 @@ import classes from "./antalya.module.css";
 import multiple from "../../../assets/images/home/blueMultiple.svg";
 import Button from "../../button/button";
 import manAntalya from "../../../assets/images/home/man-antalya.png";
+import { XThreeIcon } from "../../svgs/svgs";
+
 const AntalyaSection = () => {
   return (
     <>
       <section className={classes.sectionWrapper}>
-        {/* <div className={classes.leftSide}>
+        <div className={classes.leftSide}>
           <div className={classes.multipleImg}>
-            <img src={multiple} />
+            <XThreeIcon />
           </div>
           <div className={classes.texts}>
             <div className={classes.topTexts}>
               <div className={classes.title}>
                 <div className={classes.helloWrapper}>
-                  <p>SAY HELLO TO </p>
+                  <p>سلام کن به</p>
                 </div>
                 <div className={classes.textWrapper}>
                   <h1>Antalya</h1>
@@ -22,12 +24,10 @@ const AntalyaSection = () => {
               </div>
               <div className={classes.detail}>
                 <p>
-                  Nach dem großen Erfolg des Sommercups am 12.
-                  <br /> Juli in Wien, wird das Event nun auf ganz Österreich{" "}
-                  <br />
-                  ausgeweitet.Die neue Event Management Marke, <br />
-                  Golden Sports, n. Am 9. und 16. August 2020 gehen <br />
-                  die Events über die Bühne.
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و
+                  با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی
+                  تکنولوژی مورد نیاز، و کاربردهای متنوع
                 </p>
               </div>
             </div>
@@ -38,11 +38,11 @@ const AntalyaSection = () => {
                 icon={true}
                 btnColor={"#21B891"}
               >
-                <p>REGISTER YOUR TEAM</p>
+                <p>ثبت نام</p>
               </Button>
             </div>
           </div>
-        </div> */}
+        </div>
         <div className={classes.rightSide}>
           <img src={manAntalya} />
         </div>
