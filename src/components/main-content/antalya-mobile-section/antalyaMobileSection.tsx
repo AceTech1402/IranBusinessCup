@@ -1,5 +1,6 @@
 import classes from "./antalyaMobileSection.module.css";
-import antalyaMobile from "../../../assets/images/home/antalyaMobile.png";
+import ManAntaliaImage from "../../../assets/images/home/man-antalya.png";
+import BgAntaliaImage from "../../../assets/images/home/bg-antalya.png";
 import Button from "../../button/button";
 // import ShapeZarbdarIcon from "../../../assets/images/home/Group.svg";
 import { XThreeIcon } from "../../svgs/svgs";
@@ -7,9 +8,10 @@ import { XThreeIcon } from "../../svgs/svgs";
 const AntalyaMobileSection = () => {
   return (
     <section className={classes.sectionWrapper}>
-      <div className={classes.imgWrapper}>
-        <img src={antalyaMobile} />
-      </div>
+      {/* <div className={classes.imgWrapper}>
+        <div className={classes.bgAntalia}></div>
+        <img src={ManAntaliaImage} />
+      </div> */}
       <div className={classes.textsWrapper}>
         <div className={classes.topWrapper}>
           <div className={classes.multipleWrapper}>
