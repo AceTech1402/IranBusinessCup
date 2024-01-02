@@ -1,0 +1,68 @@
+.main_content_wrapper {
+  font-family: "Pinar FD VF";
+  @apply w-full flex justify-center items-start flex-col py-[150px] sm:px-[26px];
+}
+
+.servicesSection {
+  @apply
+  pt-[100px]
+  pb-[190px]
+  pl-[105px]
+  pr-[48px]
+  sm:px-[26px]
+  xl:px-[40px]
+  w-full
+  max-w-[1598px]
+  relative
+  flex
+  gap-5
+  mb-[146px];
+}
+
+.right {
+  top: 20px;
+  position: relative;
+  height: fit-content;
+}
+
+.title {
+  font-size: 36px;
+  line-height: normal;
+  @apply
+  text-priary
+  font-bold;
+}
+
+.left {
+  @apply flex flex-col gap-5;
+}
+
+.servicesSection .services {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.services > .service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.service > .imgContainer {
+  background-image: url('./../../assets/images/home/services/green-background.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.imgContainer > img {
+  
+}
+
+.service > .text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
