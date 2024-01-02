@@ -6,8 +6,6 @@ import classes from "./mainContent.module.css";
 // import ShapeZarbdarIcon from "./../../assets/images/home/Group.svg";
 import AntalyaSection from "./antalya/antalya";
 import AntalyaMobileSection from "./antalya-mobile-section/antalyaMobileSection";
-import map from './../../assets/images/home/map.svg';
-import calendar from './../../assets/images/home/calendar.svg';
 import HomeTehranBaner from "../home-tehran-baner/homeTehranBaner";
 import { CalendarIcon, MapIcon, XThreeIcon } from "../svgs/svgs";
 import RewardPart from "../reward-part/rewardPart";
