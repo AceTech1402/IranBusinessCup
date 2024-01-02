@@ -9,6 +9,7 @@ import AntalyaMobileSection from "./antalya-mobile-section/antalyaMobileSection"
 import HomeTehranBaner from "../home-tehran-baner/homeTehranBaner";
 import { CalendarIcon, MapIcon, XThreeIcon } from "../svgs/svgs";
 import RewardPart from "../reward-part/rewardPart";
+import { Services } from "../services/services";
 
 const MainContent = () => {
   return (
@@ -53,6 +54,7 @@ const MainContent = () => {
         </div>
         {/* ///////////////////////////////antalya section//////////////////////////// */}
         <RewardPart />
+        <Services />
         <AntalyaSection />
         <AntalyaMobileSection />
         <HomeTehranBaner />

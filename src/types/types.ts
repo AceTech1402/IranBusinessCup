@@ -41,3 +41,10 @@ export interface MatchesType {
     levelGame: string;
   }[];
 }
+
+export interface ServiceType {
+  id: string;
+  img: string;
+  title: string;
+  description: string;
+}

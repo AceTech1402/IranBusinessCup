@@ -71,13 +71,13 @@
   sm:gap-4 */
 }
 
-.details>.detail {
+.details > .detail {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.detail>.txt {
+.detail > .txt {
   color: #636363;
   font-family: 'Pinar FD VF';
   font-size: 24px;
