@@ -1,211 +1,127 @@
-.wrapperNavbar{
-    @apply
-    flex
-    justify-center
-    w-full
-    px-[80px]
-    absolute
-    top-[34px]
-    left-0
-    z-[24]
-    xl:px-[40px]
-    sm:px-[26px]
-}
-.wrapperNavbar.dark {
-    @apply
-    relative
-}
-.cover {
-    background: linear-gradient(180deg, #151636 0%, rgba(0, 0, 0, 0.02) 57.22%);
-    backdrop-filter: blur(10px);
-    @apply
-    w-full
-    h-full
-    fixed
-    top-0
-    left-0
-    z-20
-    opacity-0
-    invisible
-    duration-300
-}
-.cover.active {
-    @apply
-    visible
-    opacity-100
-}
-.button_open_menu {
-    @apply
-    w-[24px]
-    h-[24px]
-    hidden
-    items-center
-    justify-center
-    ml-auto
-    cursor-pointer
-    md:flex
-    md:relative
-    md:z-10
-}
-.button_open_menu img {
-    @apply
-    max-w-full
-    max-h-full
-    object-contain
+.wrapperNavbar {
+  @apply flex justify-center w-full px-[80px] absolute top-[34px] left-0 z-[24] xl:px-[40px] sm:px-[26px]
 }
 
-.navbar{
-    @apply
-    flex
-    items-center
-    gap-20
-    w-full
-    max-w-[1598px]
+.wrapperNavbar.dark {
+  @apply relative
+}
+
+.cover {
+  background: linear-gradient(180deg, #151636 0%, rgba(0, 0, 0, 0.02) 57.22%);
+  backdrop-filter: blur(10px);
+  @apply w-full h-full fixed top-0 left-0 z-20 opacity-0 invisible duration-300
+}
+
+.cover.active {
+  @apply visible opacity-100
+}
+
+.button_open_menu {
+  @apply w-[24px] h-[24px] hidden items-center justify-center ml-auto cursor-pointer md:flex md:relative md:z-10
+}
+
+.button_open_menu img {
+  @apply max-w-full max-h-full object-contain
+}
+
+.navbar {
+  @apply flex items-center gap-20 w-full max-w-[1598px]
 }
 
 .navbar ul {
-    @apply
-    w-full
-    flex
-    gap-[48px]
-    items-center
-    justify-start
-    md:flex-col
-    md:items-start
-    md:gap-[20px]
-    sm:gap-y-[40px]
+  @apply w-full flex gap-[48px] items-center justify-start md:flex-col md:items-start md:gap-[20px] sm:gap-y-[40px]
 }
+
 .navbar ul li {
-    @apply
-    flex
-    items-center
-    justify-start
-    sm:w-full
+  @apply flex items-center justify-start sm:w-full
 }
+
 .navbar ul li.last {
-    @apply
-    ml-auto
-    md:ml-0
+  @apply ml-auto md:ml-0
 }
+
 .navbar ul li a {
-    /* text-shadow: 2px 2px 2px #212121; */
-    @apply
-    text-white
-    flex
-    items-center
-    justify-start
-    w-full
-    sm:!text-white
+  /* text-shadow: 2px 2px 2px #212121; */
+  @apply text-white flex items-center justify-start w-full sm:!text-white
 }
+
 .navbar ul li a .image {
-    @apply
-    w-[24px]
-    h-[24px]
-    items-center
-    justify-center
-    mr-[15px]
-    hidden
-    md:flex
+  @apply w-[24px] h-[24px] items-center justify-center mr-[15px] hidden md:flex
 }
 
 .navbar ul li a .image svg {
-    @apply
-    max-w-full
-    max-h-full
-    object-contain
+  @apply max-w-full max-h-full object-contain
 }
 
 .navbar ul li a .image svg path {
-    @apply
-    stroke-white
+  @apply stroke-white
 }
+
 .navbar .logo {
   white-space: nowrap;
-    @apply
-    flex
-    items-center
-    justify-center
-    text-white
-    gap-2
-    sm:w-[63px]
+  @apply flex items-center justify-center text-white gap-2 sm:w-[63px]
 }
 
 .navbar .logo img {
-    @apply
-    min-w-[48px]
-    w-[48px]
-    h-[48px]
-    object-contain
+  @apply min-w-[48px] w-[48px] h-[48px] object-contain
 }
 
 .wrapperNavbar.dark .navbar ul li a {
-    @apply
-    text-black
+  @apply text-black
 }
 
 .navbar ul li a.active {
-    @apply
-    !text-priary
-    font-extrabold
+  @apply !text-priary font-extrabold
 }
 
 .navbar ul li a.active .image svg path {
-    @apply
-    stroke-priary
+  @apply stroke-priary
 }
 
-.sitesName{
-    @apply
-    text-white
-    font-bold
-    text-3xl
-    /* w-0.5 */
+.sitesName {
+  @apply text-white font-bold text-3xl
+  /* w-0.5 */
 }
-.wrapper1{
-    @apply
-    w-full
-    md:w-[230px]
-    md:h-screen
-    md:duration-300
-    md:fixed
-    md:z-30
-    md:-left-[300px]
-    md:backdrop-blur-[10px]
-    md:rounded-[10px]
-    md:border-[1px]
-    md:border-white
-    md:pb-20
-    md:top-0
-    md:p-5
+
+.wrapper1 {
+  @apply w-full flex items-center justify-between md:w-[230px] md:h-screen md:duration-300 md:fixed md:z-30 md:-left-[300px] md:backdrop-blur-[10px] md:rounded-[10px] md:border-[1px] md:border-white md:pb-20 md:top-0 md:p-5
+}
+
+.wrapper1 > a {
+  width: 112px;
+  min-width: 112px;
+  height: 42px;
+  font-family: "pinar";
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @apply text-priary bg-white
 }
 
 @media screen and (max-width: 767px) {
-    .wrapper1 {
-        background: linear-gradient(180deg, #2D3A47 0%, rgba(45, 58, 71, 0) 100%);
-        filter: drop-shadow(6px 6px 15px rgba(0, 0, 0, 0.6));
-        backdrop-filter: blur(60px);
-    }
+  .wrapper1 {
+    background: linear-gradient(180deg, #2D3A47 0%, rgba(45, 58, 71, 0) 100%);
+    filter: drop-shadow(6px 6px 15px rgba(0, 0, 0, 0.6));
+    backdrop-filter: blur(60px);
+  }
 }
 
 .wrapper1.active {
-    @apply
-    md:left-0
+  @apply md:left-0
 }
-.nav{
-    @apply
-    text-white
-    font-bold
-    cursor-pointer
-    hover:text-sky-500
+
+.nav {
+  @apply text-white font-bold cursor-pointer hover:text-sky-500
 }
-.slash{
-    @apply
-    text-white 
-    font-bold
+
+.slash {
+  @apply text-white font-bold
 }
-.Join{
-    @apply
-    text-white
-    font-bold
-    text-sm
+
+.Join {
+  @apply text-white font-bold text-sm
 }

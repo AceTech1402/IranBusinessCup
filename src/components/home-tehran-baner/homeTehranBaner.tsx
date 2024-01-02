@@ -2,7 +2,7 @@
 // import Card from "../card/card";
 import { CalendarIcon, MapIcon, XThreeIcon } from "../svgs/svgs";
 import classes from "./homeTehranBaner.module.css";
-// import TehranImage from "./../../assets/images/home/tehran-image.png";
+import TehranImage from "./../../assets/images/home/tehran-image.png";
 
 const HomeTehranBaner: React.FC = () => {
   const itemsOfGhore = [
@@ -48,6 +48,9 @@ const HomeTehranBaner: React.FC = () => {
               </ul>
             </div>
           </div>
+        </div>
+        <div className={classes.image}>
+            <img src={TehranImage} alt="" />
         </div>
       </div>
     </>

@@ -1,6 +1,6 @@
 .main_content_wrapper {
   font-family: "Pinar FD VF";
-  @apply w-full flex justify-center items-start flex-col py-[150px] sm:px-[26px];
+  @apply w-full flex justify-center items-start flex-col py-[150px];
 }
 
 .main_content_wrapper .main_content {

@@ -9,6 +9,8 @@ import DarkMenuIcon from "./../../assets/images/home/menu-dark.svg";
 
 import paths from "../../constants/paths";
 import { HashLink } from "react-router-hash-link";
+import Button from "../button/button";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [statusMenu, setStatusMenu] = useState<boolean>(false);
@@ -31,9 +33,7 @@ const Navbar = () => {
           !navBarDrak.includes(path) && styles.dark
         }`}
       >
-        <div
-          className={`${styles.navbar}`}
-        >
+        <div className={`${styles.navbar}`}>
           <NavLink to={paths.HOME} className={styles.logo}>
             <img src={!navBarDrak.includes(path) ? LogoDark : Logo} />
             <p>بیزینس لیگ ایران</p>
@@ -175,7 +175,7 @@ const Navbar = () => {
                       />
                     </svg>
                   </div>
-                  <p>نتیج / برنامه بازی</p>
+                  <p>نتایج / برنامه بازی</p>
                 </NavLink>
               </li>
               <li className={`${styles.last}`}>
@@ -206,6 +206,9 @@ const Navbar = () => {
                 </HashLink>
               </li>
             </ul>
+            <Link to="#register">
+              <p>ثبت نام</p>
+            </Link>
           </div>
         </div>
       </div>

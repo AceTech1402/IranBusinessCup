@@ -8,10 +8,10 @@ import { XThreeIcon } from "../../svgs/svgs";
 const AntalyaMobileSection = () => {
   return (
     <section className={classes.sectionWrapper}>
-      {/* <div className={classes.imgWrapper}>
+      <div className={classes.imgWrapper}>
         <div className={classes.bgAntalia}></div>
         <img src={ManAntaliaImage} />
-      </div> */}
+      </div>
       <div className={classes.textsWrapper}>
         <div className={classes.topWrapper}>
           <div className={classes.multipleWrapper}>

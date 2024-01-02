@@ -9,13 +9,18 @@
     xl:px-[40px]
     sm:px-[26px]
 }
+
+.header_wrapper .imageEuroCup {
+  margin-top: 22px;
+}
+
 .header_wrapper .header {
     @apply
     w-full
     max-w-[1598px]
     flex
     items-start
-    justify-start
+    justify-between
     lg:flex-col-reverse
     lg:items-center
     lg:pb-[20px]
@@ -49,6 +54,24 @@
     lg:leading-[9vw]
 }
 
+.header_wrapper .header .text_wrapper .title h1 span {
+  position: relative;
+  z-index: 1;
+}
+
+.header_wrapper .header .text_wrapper .title h1 span::before {
+  content: "";
+  width: 100%;
+  height: 20px;
+  position: absolute;
+  z-index: -1;
+  border-radius: 2px;
+  top: 10px;
+  bottom: 0;
+  margin: auto;
+  @apply bg-priary
+}
+
 .header_wrapper .header .text_wrapper .explain {
     @apply
     text-white  
@@ -63,7 +86,7 @@
     items-center
     justify-center
     w-full
-    max-w-[888px]
+    max-w-[610px]
     relative
     z-[1]
    lg:max-w-[352px]
@@ -76,12 +99,12 @@
     background-size: cover;
     @apply
     absolute
-    w-[1104px]
+    w-[796px]
     h-full
     -z-[1]
     top-0
     bg-no-repeat
-    -right-[9vw]
+    -right-[6vw]
     xxl:-right-[16vw]
     xl:-right-[30vw]
     lg:w-[376px]
@@ -104,14 +127,14 @@
 } */
 
 .business_image_bg{
+  height: calc(100% - 100px);
     @apply
     flex
     justify-center
     absolute
     -z-[1]
-    left-[40px]
-    top-[27px]
-    h-full
+    right-[40px]
+    bottom-[27px]
     sm:h-[417px]
     xs:h-[380px]
 }
