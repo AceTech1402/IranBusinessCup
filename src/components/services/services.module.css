@@ -6,7 +6,7 @@
 .servicesSection {
   @apply
   pt-[100px]
-  pb-[190px]
+  /* pb-[190px] */
   pl-[105px]
   pr-[48px]
   sm:px-[26px]

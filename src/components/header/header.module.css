@@ -54,6 +54,12 @@
     lg:leading-[9vw]
 }
 
+.text_wrapper .title h1 p {
+  @apply
+  text-[56px]
+  font-semibold
+}
+
 .header_wrapper .header .text_wrapper .title h1 span {
   position: relative;
   z-index: 1;

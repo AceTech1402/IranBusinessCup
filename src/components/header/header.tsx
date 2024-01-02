@@ -21,7 +21,8 @@ export const Header = () => {
             <div className={styles.text_wrapper}>
               <div className={styles.title}>
                 <h1>
-                  <span>فوتبال</span> بازی کسب و کارتو گسترش بده
+                  <span>فوتبال</span> بازی کن 
+                  <p>کسب و کارتو گسترش بده</p>
                 </h1>
               </div>
               <div className={styles.explain}>
