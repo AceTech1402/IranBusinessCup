@@ -1,9 +1,9 @@
-export const XThreeIcon: React.FC<{theme?: string}> = ({theme = "white"}) => {
+export const XThreeIcon: React.FC<{theme?: string; size?: string}> = ({theme = "white", size = 'big'}) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="36"
-      height="132"
+      width={size === 'big' ? '36' : '32'}
+      height={size === 'big' ? '132' : '118'}
       viewBox="0 0 36 132"
       fill="none"
     >
