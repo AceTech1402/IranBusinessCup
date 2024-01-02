@@ -1,71 +1,64 @@
-.sectionWrapper{
-  @apply
-  w-[100%]
-  flex-col
-  mt-[65px]
-  hidden
-  md:flex
-  sm:flex
-  xs:flex
+.sectionWrapper {
+  position: relative;
+  @apply w-[100%] flex-col mt-[65px] mb-[78px] hidden lg:flex sm:flex xs:flex
 }
-.textsWrapper{
- @apply
- flex
- flex-col
- gap-[23px]
- pt-[77px]
- pl-[18px]
- pr-[3px]
- w-[100%]
- items-center
+.imgWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.topWrapper{
-  @apply
-  flex
-  gap-[9px]
-}
-.title{
-  @apply
-  flex
-  gap-[15px]
-  -mt-[15px]
-  whitespace-nowrap
-}
-.sayHello p{
-  @apply
-  font-[400]
-  text-[28px]
-  text-priary
-}
-.textWrapper h1{
-  @apply
-  font-[400]
-  text-[83px]
-  text-priary
-  font-[Ammhenthi]
-  -mt-[38px]
-}
-.multipleWrapper{
-  @apply
-  w-[18px]
-  -mb-[20px]
 
+.textsWrapper {
+  @apply flex flex-col gap-[23px] pt-[77px] px-[10px] w-[100%] items-center
 }
-.detail p{
-  @apply
-  text-black
-  font-[500]
-  text-[14px]
-  font-['Raleway']
+
+.topWrapper {
+  @apply flex gap-[9px] ml-auto
 }
-.imgWrapper img{
-  @apply
-  w-[100%]
+
+.title {
+  @apply flex gap-[15px] -mt-[15px] whitespace-nowrap
 }
-.button{
-  @apply
-  w-[100%]
-  flex
- justify-center
- 
+
+.sayHello p {
+  font-family: "pinar";
+  @apply font-[600] text-[30px] text-priary sm:text-[7vw]
+}
+
+.textWrapper h1 {
+  @apply font-[400] text-[60px] text-priary font-[Ammhenthi] -mt-[18px] sm:text-[18vw]
+}
+
+.multipleWrapper {
+  @apply w-[18px]
+  /* -mb-[20px] */
+  flex items-start justify-center
+}
+
+.multipleWrapper svg {
+  @apply max-w-full max-h-full object-contain h-auto
+}
+
+.detail p {
+  @apply text-black font-[500] text-[14px] font-['noora']
+}
+
+.imgWrapper img {
+  background-size: cover;
+  @apply w-full h-full object-contain
+}
+
+.imgWrapper::before {
+  content: "";
+  position: absolute;
+  opacity: 0.8;
+  background: linear-gradient(89deg, #171717 0.54%, rgba(33, 33, 33, 0.00) 116.46%);
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.button {
+  @apply w-[100%] flex justify-center
 }

@@ -1,6 +1,6 @@
 .sectionWrapper {
   background: url("../../../assets/images/home/bg-antalya.png") round;
-  @apply w-[100%] flex items-center mb-[78px] mt-[202px] relative md:hidden sm:hidden px-[100px] py-[80px]
+  @apply w-[100%] flex items-center mb-[78px] mt-[202px] relative lg:hidden sm:hidden px-[100px] py-[80px] justify-between pl-[450px]
 }
 
 .sectionWrapper::before {
@@ -35,11 +35,11 @@
 }
 
 .helloWrapper p {
-  @apply font-[400] text-[40px] text-white
+  @apply font-[500] text-[3vw] text-white
 }
 
 .textWrapper h1 {
-  @apply font-[400] text-[150px] text-white font-[Ammhenthi] -mt-[36px]
+  @apply font-[500] text-[8vw] text-white font-[Ammhenthi] -mt-[36px] xl:text-[10vw]
 }
 
 .detail {
@@ -55,9 +55,12 @@
 
 .rightSide {
   /* transform: rotateY(180deg); */
-  @apply
+  /* @apply */
   /* w-[544px] */
-  w-[35%] h-[799px] -mt-[147px] absolute flex items-end left-[10%] bottom-0
+  /* w-[368px]  h-[599px] flex items-end relative z-[1] -mt-[300px] -bottom-[97px] */
+  position: absolute;
+  bottom: 0;
+  left: 100px;
 }
 
 .rightSide img {
