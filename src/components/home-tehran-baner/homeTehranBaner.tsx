@@ -1,13 +1,54 @@
 // import React from 'react'
 // import Card from "../card/card";
+import { CalendarIcon, MapIcon, XThreeIcon } from "../svgs/svgs";
 import classes from "./homeTehranBaner.module.css";
-import TehranImage from "./../../assets/images/home/tehran-image.png";
+// import TehranImage from "./../../assets/images/home/tehran-image.png";
 
 const HomeTehranBaner: React.FC = () => {
+  const itemsOfGhore = [
+    {
+      id: 1,
+      icon: <MapIcon />,
+      text: "تهران، هتل اسپیناس پالاس",
+    },
+    {
+      id: 2,
+      icon: <CalendarIcon />,
+      text: "16  بهمن",
+    },
+  ];
+
   return (
     <>
       <div className={`${classes.main_content_wrapper}`}>
-        <img src={TehranImage} />
+        <div className={classes.textWrapper}>
+          <div className={classes.multiIcon}>
+            <XThreeIcon />
+          </div>
+          <div className={classes.text}>
+            <div className={classes.title}>
+              <p>قرعه کشی</p>
+            </div>
+            <div className={classes.description}>
+              <p>
+                ورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+                استفاده از طراحان گرافیک است، چاپگرها
+              </p>
+            </div>
+            <div className={classes.items}>
+              <ul>
+                {itemsOfGhore.map((item) => (
+                  <li>
+                    <div className={classes.icon}>{item.icon}</div>
+                    <div className={classes.text}>
+                      <p>{item.text}</p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );

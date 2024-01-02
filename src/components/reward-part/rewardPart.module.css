@@ -85,8 +85,12 @@
   justify-content: flex-start;
   font-family: "pinar FD VF";
   gap: 20px;
+  font-size: 20px;
 }
-
+.left ul li:nth-child(1) .description .top {
+  font-weight: 600;
+  font-size: 28px;
+}
 .left ul li .description .top>p {
   position: relative;
   z-index: 1;

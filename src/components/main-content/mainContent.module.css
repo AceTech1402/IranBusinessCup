@@ -6,7 +6,6 @@
     items-start
     flex-col
     py-[150px]
-    sm:px-[26px]
 }
 .main_content_wrapper .main_content {
     @apply
