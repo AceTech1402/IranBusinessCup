@@ -47,7 +47,7 @@ export const XThreeIcon: React.FC<{theme?: string; size?: string}> = ({theme = "
   );
 };
 
-export const MapIcon: React.FC = () => {
+export const MapIcon: React.FC<{color?: string}> = ({color = "#ffffff"}) => {
   return (
     <svg
       width="40"
@@ -58,34 +58,34 @@ export const MapIcon: React.FC = () => {
     >
       <path
         d="M36.6667 15.0002V25.0002C36.6667 29.1669 35.8334 32.0835 33.9667 33.9669L23.3334 23.3335L36.2167 10.4502C36.5167 11.7669 36.6667 13.2669 36.6667 15.0002Z"
-        stroke="white"
-        strokeWidth="3"
+        stroke={color}
+        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M36.2167 10.4497L10.45 36.2163C5.43336 35.0663 3.33337 31.5997 3.33337 24.9997V14.9997C3.33337 6.66634 6.66671 3.33301 15 3.33301H25C31.6 3.33301 35.0667 5.43302 36.2167 10.4497Z"
-        stroke="white"
-        strokeWidth="3"
+        stroke={color}
+        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M33.9666 33.9663C32.0833 35.833 29.1666 36.6663 25 36.6663H15C13.2666 36.6663 11.7666 36.5163 10.45 36.2163L23.3333 23.333L33.9666 33.9663Z"
-        stroke="white"
-        strokeWidth="3"
+        stroke={color}
+        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M10.3999 13.3002C11.5333 8.41686 18.8666 8.41686 20 13.3002C20.65 16.1669 18.8499 18.6002 17.2666 20.1002C16.1166 21.2002 14.3 21.2002 13.1333 20.1002C11.55 18.6002 9.73328 16.1669 10.3999 13.3002Z"
-        stroke="white"
-        strokeWidth="3"
+        stroke={color}
+        strokeWidth="2"
       />
       <path
         d="M15.1577 14.5003H15.1726"
-        stroke="white"
-        strokeWidth="3"
+        stroke={color}
+        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
@@ -93,7 +93,7 @@ export const MapIcon: React.FC = () => {
   );
 };
 
-export const CalendarIcon: React.FC = () => {
+export const CalendarIcon: React.FC<{color?: string}> = ({color = "#ffffff"}) => {
   return (
     <svg
       width="40"
@@ -104,75 +104,75 @@ export const CalendarIcon: React.FC = () => {
     >
       <path
         d="M13.3333 3.33301V8.33301"
-        stroke="white"
-        strokeWidth="3"
+        stroke={color}
+        strokeWidth="2"
         strokeMiterlimit="10"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M26.6667 3.33301V8.33301"
-        stroke="white"
-        strokeWidth="3"
+        stroke={color}
+        strokeWidth="2"
         strokeMiterlimit="10"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M5.83331 15.1494H34.1666"
-        stroke="white"
-        strokeWidth="3"
+        stroke={color}
+        strokeWidth="2"
         strokeMiterlimit="10"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M35 14.1663V28.333C35 33.333 32.5 36.6663 26.6667 36.6663H13.3333C7.5 36.6663 5 33.333 5 28.333V14.1663C5 9.16634 7.5 5.83301 13.3333 5.83301H26.6667C32.5 5.83301 35 9.16634 35 14.1663Z"
-        stroke="white"
-        strokeWidth="3"
+        stroke={color}
+        strokeWidth="2"
         strokeMiterlimit="10"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M26.1579 22.8333H26.1728"
-        stroke="white"
-        strokeWidth="3"
+        stroke={color}
+        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M26.1579 27.8333H26.1728"
-        stroke="white"
-        strokeWidth="3"
+        stroke={color}
+        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M19.9925 22.8333H20.0074"
-        stroke="white"
-        strokeWidth="3"
+        stroke={color}
+        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M19.9925 27.8333H20.0074"
-        stroke="white"
-        strokeWidth="3"
+        stroke={color}
+        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M13.8239 22.8333H13.8388"
-        stroke="white"
-        strokeWidth="3"
+        stroke={color}
+        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M13.8239 27.8333H13.8388"
-        stroke="white"
-        strokeWidth="3"
+        stroke={color}
+        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />

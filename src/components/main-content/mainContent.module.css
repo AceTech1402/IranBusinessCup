@@ -1,90 +1,60 @@
 .main_content_wrapper {
   font-family: "Pinar FD VF";
-  @apply w-full
-    flex
-    justify-center
-    items-start
-    flex-col
-    py-[150px]
-    sm:px-[26px];
+  @apply w-full flex justify-center items-start flex-col py-[150px] sm:px-[26px];
 }
+
 .main_content_wrapper .main_content {
-  @apply sm:px-[26px]
-    px-[80px]
-    xl:px-[40px]
-    w-full
-    max-w-[1598px]
-    relative
-    flex
-    gap-5
-    pl-[56px];
+  @apply sm:px-[26px] px-[80px] xl:px-[40px] w-full max-w-[1598px] relative flex gap-5 pl-[56px] mb-[146px]
 }
+
 .right {
   top: 20px;
   position: relative;
   height: fit-content;
 }
+
 .top {
-  @apply flex
-    gap-5
-    relative
-    pl-[56px];
+  @apply flex gap-5 relative pl-[56px];
 }
+
 .bottom {
-  @apply flex
-    gap-5
-    mt-[150px]
-    sm:mt-[80px]
-    pl-[56px]
-    relative;
+  @apply flex gap-5 mt-[150px] sm:mt-[80px] pl-[56px] relative;
 }
+
 .title {
   font-size: 36px;
   line-height: normal;
-  @apply text-priary
-    font-bold
-    text-[50px]
-    sm:text-[36px];
+  @apply text-priary font-bold text-[50px] sm:text-[36px];
 }
+
 .explain {
   color: #636363;
   line-height: normal;
-  @apply text-black
-    mb-5;
+  @apply text-black mb-5;
 }
+
 .left {
-  @apply flex
-    flex-col
-    gap-5;
+  @apply flex flex-col gap-5;
 }
+
 .calender {
-  @apply flex
-    gap-[15px];
+  @apply flex gap-[15px];
 }
+
 .calender .icon {
-  @apply w-[26px]
-    h-[26px]
-    min-w-[26px]
-    flex;
+  @apply w-[26px] h-[26px] min-w-[26px] flex;
 }
 
 .month {
   text-transform: capitalize;
-  @apply font-bold
-    font-[Raleway]
-    text-[20px]
-    leading-[30px];
+  @apply font-bold font-[Raleway] text-[20px] leading-[30px];
 }
+
 .cards {
-  @apply flex
-    gap-[56px]
-    w-full
-    mt-[40px]
-    items-start
-    justify-start
-    overflow-y-auto
-    /* flex-wrap */
-    /* bg-slate-600 */;
+  @apply flex gap-[56px] w-full mt-[40px] items-start justify-start overflow-y-auto
+  /* flex-wrap */
+  /* bg-slate-600 */
+  ;
 }
 
 .cards::-webkit-scrollbar {
@@ -101,12 +71,13 @@
   sm:gap-4 */
 }
 
-.details > .detail {
+.details>.detail {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.detail > .txt {
+
+.detail>.txt {
   color: #636363;
   font-family: 'Pinar FD VF';
   font-size: 24px;

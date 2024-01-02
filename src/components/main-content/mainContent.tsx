@@ -9,7 +9,8 @@ import AntalyaMobileSection from "./antalya-mobile-section/antalyaMobileSection"
 import map from './../../assets/images/home/map.svg';
 import calendar from './../../assets/images/home/calendar.svg';
 import HomeTehranBaner from "../home-tehran-baner/homeTehranBaner";
-import { XThreeIcon } from "../svgs/svgs";
+import { CalendarIcon, MapIcon, XThreeIcon } from "../svgs/svgs";
+import RewardPart from "../reward-part/rewardPart";
 
 const MainContent = () => {
   return (
@@ -38,17 +39,22 @@ const MainContent = () => {
             </div>
             <div className={classes.details}>
               <div className={classes.detail}>
-                <span className={classes.icon}><img src={map}/></span>
+                <span className={classes.icon}>
+                  <MapIcon color="#636363" />
+                </span>
                 <span className={classes.txt}>تهران، ورزشگاه شهید شیرودی</span>
               </div>
               <div className={classes.detail}>
-                <span className={classes.icon}><img src={calendar}/></span>
+                <span className={classes.icon}>
+                  <CalendarIcon color="#636363" />
+                </span>
                 <span className={classes.txt}>14 تا 16 بهمن</span>
               </div>
             </div>
           </div>
         </div>
         {/* ///////////////////////////////antalya section//////////////////////////// */}
+        <RewardPart />
         <AntalyaSection />
         <AntalyaMobileSection />
         <HomeTehranBaner />
