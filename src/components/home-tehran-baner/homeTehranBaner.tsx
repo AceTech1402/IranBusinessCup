@@ -11,11 +11,11 @@ const HomeTehranBaner: React.FC = () => {
       icon: <MapIcon />,
       text: "تهران، هتل اسپیناس پالاس",
     },
-    {
-      id: 2,
-      icon: <CalendarIcon />,
-      text: "16  بهمن",
-    },
+    // {
+    //   id: 2,
+    //   icon: <CalendarIcon />,
+    //   text: "16  بهمن",
+    // },
   ];
 
   return (
@@ -31,8 +31,8 @@ const HomeTehranBaner: React.FC = () => {
             </div>
             <div className={classes.description}>
               <p>
-                ورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
-                استفاده از طراحان گرافیک است، چاپگرها
+                مراسم قرعه کشی و افتتاحیه تورنومنت در هتل اسپیناس پالاس برگزار
+                خواهد شد.
               </p>
             </div>
             <div className={classes.items}>
@@ -50,7 +50,7 @@ const HomeTehranBaner: React.FC = () => {
           </div>
         </div>
         <div className={classes.image}>
-            <img src={TehranImage} alt="" />
+          <img src={TehranImage} alt="" />
         </div>
       </div>
     </>

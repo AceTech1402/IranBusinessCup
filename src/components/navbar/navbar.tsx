@@ -84,12 +84,12 @@ const Navbar = () => {
                 </NavLink>
               </li>
               <li>
-                <NavLink
-                  to={paths.RESULT}
-                  className={({ isActive }) => {
-                    return isActive ? styles.active : "";
-                  }}
-                  onClick={() => toggleStatusMenu()}
+                <Link
+                  to="#"
+                  // className={({ isActive }) => {
+                  //   return isActive ? styles.active : "";
+                  // }}
+                  // onClick={() => toggleStatusMenu()}
                 >
                   <div className={styles.image}>
                     <svg
@@ -176,7 +176,7 @@ const Navbar = () => {
                     </svg>
                   </div>
                   <p>نتایج / برنامه بازی</p>
-                </NavLink>
+                </Link>
               </li>
               <li className={`${styles.last}`}>
                 <HashLink
@@ -206,9 +206,15 @@ const Navbar = () => {
                 </HashLink>
               </li>
             </ul>
-            <Link to="#register">
+            <HashLink
+              to="/#register"
+              smooth
+              onClick={() => {
+                setStatusMenu(false);
+              }}
+            >
               <p>ثبت نام</p>
-            </Link>
+            </HashLink>
           </div>
         </div>
       </div>

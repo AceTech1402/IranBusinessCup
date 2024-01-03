@@ -9,7 +9,7 @@
   /* max-height: 509px; */
   /* padding-top: 174px; */
 
-  @apply md:flex-col-reverse
+  @apply md:flex-col-reverse;
 }
 
 /* .main_content_wrapper img {
@@ -39,7 +39,7 @@
   gap: 29px;
   position: absolute;
 
-  @apply md:relative md:px-[10px] md:py-0 md:pt-[20px]
+  @apply md:relative md:px-[10px] md:py-0 md:pt-[20px];
 }
 
 .main_content_wrapper .textWrapper .title {
@@ -47,7 +47,7 @@
   font-family: "pinar FD VF";
   font-weight: 700;
   font-size: 2.5vw;
-  @apply text-white md:text-priary md:text-2xl
+  @apply text-white md:text-priary md:text-2xl;
 }
 
 .main_content_wrapper .textWrapper .multiIcon {
@@ -62,7 +62,7 @@
   max-height: 100%;
   object-fit: contain;
 
-  @apply md:stroke-[#212121]
+  @apply md:stroke-[#212121];
 }
 
 .main_content_wrapper .textWrapper .text {
@@ -74,20 +74,20 @@
   max-width: 507px;
   gap: 16px;
 
-  @apply md:max-w-none
+  @apply md:max-w-none;
 }
 
 .main_content_wrapper .textWrapper .text .description {
   font-family: "noora";
-  font-size: 1.4vw;
-  font-weight: 300;
-  line-height: 2.5vw;
-  @apply text-white md:text-black md:text-base
+  line-height: 2.7vw;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.36px;
+  @apply text-white md:text-black md:text-base;
 }
 
 .main_content_wrapper .textWrapper .text .items {
   width: 100%;
-
 }
 
 .main_content_wrapper .textWrapper .text .items ul {
@@ -114,24 +114,22 @@
   align-items: center;
   justify-content: center;
 
-  @apply md:w-[40px] md:max-w-[40px] md:h-[40px]
+  @apply md:w-[40px] md:max-w-[40px] md:h-[40px];
 }
 
 .main_content_wrapper .textWrapper .text .items ul li .icon svg {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
-
-
 }
 
 .main_content_wrapper .textWrapper .text .items ul li .icon svg path {
-  @apply md:stroke-black
+  @apply md:stroke-black;
 }
 
 .main_content_wrapper .textWrapper .text .items ul li .text {
   font-family: "pinar FD VF";
   font-size: 1vw;
   font-weight: 600;
-  @apply text-white md:text-black md:text-base
+  @apply text-white md:text-black md:text-base;
 }
