@@ -3,7 +3,7 @@ import classes from "./mainContent.module.css";
 import AntalyaSection from "./antalya/antalya";
 import AntalyaMobileSection from "./antalya-mobile-section/antalyaMobileSection";
 import HomeTehranBaner from "../home-tehran-baner/homeTehranBaner";
-import { CalendarIcon, MapIcon, XThreeIcon } from "../svgs/svgs";
+import { XThreeIcon } from "../svgs/svgs";
 import RewardPart from "../reward-part/rewardPart";
 import { Services } from "../services/services";
 
