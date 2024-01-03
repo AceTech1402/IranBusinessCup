@@ -52,11 +52,18 @@
     leading-[6vw]
     lg:text-[6vw]
     lg:leading-[9vw]
+    sm:text-[9vw]
+    sm:leading-[12vw]
 }
 
 .text_wrapper .title h1 p {
   @apply
-  text-[56px]
+  text-[3vw]
+  leading-[5.5vw]
+  lg:text-[5vw]
+  lg:leading-[10vw]
+  sm:text-[7vw]
+  sm:leading-[15vw]
   font-semibold
 }
 
@@ -96,6 +103,8 @@
     relative
     z-[1]
    lg:max-w-[352px]
+   lg:mr-[10vw]
+   md:w-[56vw]
    xs:-right-[26px]
 }
 
@@ -115,6 +124,7 @@
     xl:-right-[30vw]
     lg:w-[376px]
     lg:right-auto
+    md:w-[70vw]
 }
 
 .header_wrapper .header .heroMan img {

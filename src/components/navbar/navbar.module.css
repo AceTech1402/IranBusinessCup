@@ -17,7 +17,7 @@
 }
 
 .button_open_menu {
-  @apply w-[24px] h-[24px] hidden items-center justify-center ml-auto cursor-pointer md:flex md:relative md:z-10
+  @apply w-[24px] h-[24px] hidden items-center justify-center cursor-pointer md:flex md:relative md:z-10
 }
 
 .button_open_menu img {
@@ -25,7 +25,7 @@
 }
 
 .navbar {
-  @apply flex items-center gap-20 w-full max-w-[1598px]
+  @apply flex items-center gap-20 w-full max-w-[1598px] md:justify-between
 }
 
 .navbar ul {
@@ -61,7 +61,10 @@
   white-space: nowrap;
   @apply flex items-center justify-center text-white gap-2 sm:w-[63px]
 }
-
+.navbar .logo p {
+  @apply
+  lg:hidden
+}
 .navbar .logo img {
   @apply min-w-[48px] w-[48px] h-[48px] object-contain
 }
