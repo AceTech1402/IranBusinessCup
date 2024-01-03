@@ -1,9 +1,5 @@
-// import React from 'react'
-// import Card from "../card/card";
 import classes from "./mainContent.module.css";
 
-// import CalendarIcon from "./../../assets/images/home/calendar.svg";
-// import ShapeZarbdarIcon from "./../../assets/images/home/Group.svg";
 import AntalyaSection from "./antalya/antalya";
 import AntalyaMobileSection from "./antalya-mobile-section/antalyaMobileSection";
 import HomeTehranBaner from "../home-tehran-baner/homeTehranBaner";

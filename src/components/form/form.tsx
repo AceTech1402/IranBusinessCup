@@ -1,9 +1,7 @@
-// import React from 'react'
 import Button from "../button/button";
 import styles from "./form.module.css";
 import { useForm } from "react-hook-form";
-// import { yupResolver } from "@hookform/resolvers/yup";
-// import * as yup from "yup";
+
 
 import ShapeZarbdarImage from "./../../assets/images/home/Group 46.svg";
 import { NavLink } from "react-router-dom";
@@ -17,21 +15,12 @@ interface FormDataType {
   Lastname: string;
   Companyname: string;
   Email: string;
-  phoneNumber: string;
-  Location: string;
+  mobile: string;
+  address: string;
   AccessPrivacy: boolean;
 }
 
 const Form = () => {
-  // const schema = yup.object({
-  //   Firstname: yup.string().required("this field is required"),
-  //   Lastname: yup.string().required("this field is required"),
-  //   Companyname: yup.string().required("this field is required"),
-  //   Email: yup.string().required("this field is required"),
-  //   Location: yup.string().required("this field is required"),
-  //   Zipcode: yup.string().required("this field is required"),
-  //   AccessPrivacy: yup.boolean().required("please accept this field.")
-  // });
   const email_regular =
     /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
@@ -56,8 +45,8 @@ const Form = () => {
       l_name: data.Lastname,
       company_name: data.Companyname,
       email: data.Email,
-      phoneNumber: data.phoneNumber,
-      location: data.Location,
+      mobile: data.mobile,
+      address: data.address,
     };
     handle_register(dataForm);
   };
@@ -137,11 +126,11 @@ const Form = () => {
               <input
                 type="text"
                 className={styles.borderInput}
-                {...register("phoneNumber", {
+                {...register("mobile", {
                   required: "لطفا شماره تماس خود را وارد کنید",
                 })}
               />
-              <p className={styles.para}>{errors.Email?.message}</p>
+              <p className={styles.para}>{errors.mobile?.message}</p>
             </div>
           </div>
           <div className={styles.oneColumn}>
@@ -150,11 +139,11 @@ const Form = () => {
               <input
                 type="text"
                 className={styles.borderInput}
-                {...register("Location", {
+                {...register("address", {
                   required: "لطفا ادرس شرکت خود را وارد کنید",
                 })}
               />
-              <p className={styles.para}>{errors.Location?.message}</p>
+              <p className={styles.para}>{errors.address?.message}</p>
             </div>
           </div>
           <div className={styles.checkButton}>
@@ -172,7 +161,7 @@ const Form = () => {
                 <div className={styles.text}>
                   <p>
                     <NavLink
-                      to="https://www.goldensports.at/events-agb"
+                      to="/register-rules"
                       className={styles.textBlue}
                     >
                       <span>قوانین ثبت نام ایران بیزنس کاپ </span>

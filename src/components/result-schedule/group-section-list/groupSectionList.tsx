@@ -124,7 +124,7 @@ const groupsData: GroupDataType[] = [
 export const GroupSectionList: React.FC = () => {
   return (
     <ul className={classes.groupSectionList}>
-      {groupsData.map(groupData => <GroupSectionItem groupData={groupData} />)}
+      {groupsData.map(groupData => <GroupSectionItem groupData={groupData} key={groupData.id} />)}
     </ul>
   );
 };

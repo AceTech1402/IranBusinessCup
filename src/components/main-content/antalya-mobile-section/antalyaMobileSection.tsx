@@ -1,8 +1,6 @@
 import classes from "./antalyaMobileSection.module.css";
 import ManAntaliaImage from "../../../assets/images/home/man-antalya.png";
-import BgAntaliaImage from "../../../assets/images/home/bg-antalya.png";
 import Button from "../../button/button";
-// import ShapeZarbdarIcon from "../../../assets/images/home/Group.svg";
 import { XThreeIcon } from "../../svgs/svgs";
 
 const AntalyaMobileSection = () => {

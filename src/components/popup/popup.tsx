@@ -1,8 +1,5 @@
 import classes from "./popup.module.css";
 
-// import SuccessIcon from "./../../icons/tick.svg";
-// import ErrorIcon from "./../../icons/close.svg";
-// import WarnningIcon from "./../../icons/danger.svg";
 import { NavLink } from "react-router-dom";
 
 interface propsType {
@@ -49,13 +46,13 @@ const Popup = ({
               style={{
                 color:
                   result_req === 1
-                    ? "#1496F5"
+                    ? "#21B891"
                     : result_req === 0
                     ? "#FFEA00"
                     : "#FA0000",
               }}
             >
-              {result_req === 1 ? "Register Successful" : "Register Faild"}
+              {result_req === 1 ? "ثبت نام با موفقیت انجام شد" : "خطا در ثبت نام"}
             </p>
           </div>
         </div>
@@ -71,7 +68,7 @@ const Popup = ({
               }}
               className={classes.button}
             >
-              Go to homepage
+              برو صفحه اصلی
             </NavLink>
           ) : (
             <button
@@ -86,13 +83,13 @@ const Popup = ({
                     : "",
                 backgroundColor:
                   result_req === 0
-                    ? "#1496F5"
+                    ? "#21B891"
                     : result_req === 2
-                    ? "#1496F5"
+                    ? "#21B891"
                     : "",
               }}
             >
-              <p>try again</p>
+              <p>تلاش مجدد</p>
             </button>
           )}
         </div>

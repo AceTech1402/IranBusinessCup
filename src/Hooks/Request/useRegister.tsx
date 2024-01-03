@@ -5,8 +5,8 @@ interface FormDataType {
   f_name: string;
   l_name: string;
   email: string;
-  location: string;
-  phoneNumber: string;
+  address: string;
+  mobile: string;
   company_name: string;
 }
 
@@ -24,23 +24,23 @@ const useRegister = () => {
     f_name,
     l_name,
     email,
-    location,
-    phoneNumber,
+    address,
+    mobile,
     company_name,
   }:FormDataType) => {
     const formData = new FormData();
     formData.append("f_name", f_name);
     formData.append("l_name", l_name);
-    formData.append("location", location);
+    formData.append("address", address);
     formData.append("email", email);
     formData.append("company_name", company_name);
-    formData.append("phone_number", phoneNumber);
+    formData.append("mobile", mobile);
 
     try {
       setSending(true);
       await axios
         .post(
-          "http://185.191.79.189:8071/request/addRequest_business_liga",
+          "https://api.goldensports.at/request/addRequest_iranbusinesscup",
           formData,
           {
             headers: {

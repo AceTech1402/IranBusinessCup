@@ -1,9 +1,7 @@
 // import React from 'react'
 import styles from "./rewardPart.module.css";
 
-import EuroCupImage from "./../../assets/images/home/euroCup.png";
 import CupImage from "./../../assets/images/home/cup.png";
-import ZarbdarImage from "./../../assets/images/home/Group40.png";
 import { XThreeIcon } from "../svgs/svgs";
 
 const RewardPart = () => {

@@ -5,11 +5,8 @@ import styles from "./navbar.module.css";
 import Logo from "./../../assets/images/home/logo.svg";
 import LogoDark from "./../../assets/images/home/logo-dark.svg";
 import MenuIcon from "./../../assets/images/home/menu.svg";
-import DarkMenuIcon from "./../../assets/images/home/menu-dark.svg";
 
 import paths from "../../constants/paths";
-import { HashLink } from "react-router-hash-link";
-import Button from "../button/button";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -42,7 +39,7 @@ const Navbar = () => {
             className={styles.button_open_menu}
             onClick={() => toggleStatusMenu()}
           >
-            <img src={!navBarDrak.includes(path) ? DarkMenuIcon : MenuIcon} />
+            <img src={MenuIcon} />
           </div>
           <div
             className={`${styles.wrapper1} ${statusMenu ? styles.active : ""}`}
@@ -178,7 +175,7 @@ const Navbar = () => {
                   <p>نتایج / برنامه بازی</p>
                 </Link>
               </li>
-              <li className={`${styles.last}`}>
+              {/* <li className={`${styles.last}`}>
                 <HashLink
                   to="/#register"
                   smooth
@@ -204,7 +201,7 @@ const Navbar = () => {
                   </div>
                   <p>درباره ما</p>
                 </HashLink>
-              </li>
+              </li> */}
             </ul>
             <HashLink
               to="/#register"

@@ -4,7 +4,7 @@ import logoWithName from "./../../assets/images/home/logo-with-name.svg";
 import { NavLink } from "react-router-dom";
 import SmsIcon from "./../../assets/images/home/sms.svg";
 import LocationIcon from "./../../assets/images/home/location.svg";
-import call from './../../assets/images/home/call.svg';
+import call from "./../../assets/images/home/call.svg";
 interface ItemsType {
   id: number;
   text: string;
@@ -22,18 +22,22 @@ const ItemsFooter: ItemsFooterType[] = [
     id: 1,
     title: "Get In Touch",
     items: [
-      { id: 1, text: "درباره ما", link: "https://goldensports.at/#contactus" },
-      { id: 2, text: "ارتباط با ما", link: "https://goldensports.at/impressum" },
+      // { id: 1, text: "درباره ما", link: "https://goldensports.at/#contactus" },
+      {
+        id: 2,
+        text: "ارتباط با ما",
+        link: "https://goldensports.at/impressum",
+      },
       { id: 3, text: " نتایج/برنامه بازی" },
-      { id: 4, text: " خانه" },
+      { id: 4, text: " خانه", link: "/" },
     ],
   },
   {
     id: 2,
     title: "Über die Business League",
     items: [
-      { id: 1, text: "قوانین بازی" },
-      { id: 2, text: "قوانین ثبت نام" },
+      { id: 1, text: "قوانین بازی", link: "/playing-rules" },
+      { id: 2, text: "قوانین ثبت نام", link: "/register-rules" },
     ],
   },
 ];
@@ -43,7 +47,7 @@ const cantactus = [
     id: 1,
     title: "ارتباط  با  ما",
     items: [
-      { id: 1, icon: call, text: '02144464914' },
+      { id: 1, icon: call, text: "02144464914" },
       { id: 2, icon: SmsIcon, text: "Support@goldensports.at" },
       {
         id: 3,
@@ -67,17 +71,22 @@ const Footer = () => {
             </div>
           </div>
           {ItemsFooter.map((item) => (
-              <ul className={classes.items} key={item.id}>
-                {item.items.map((text) => (
-                  <li className={classes.item} key={text.id}>
-                    {text.link ? (
-                      <NavLink to={text.link}>{text.text}</NavLink>
-                    ) : (
-                      <p>{text.text}</p>
-                    )}
-                  </li>
-                ))}
-              </ul>
+            <ul className={classes.items} key={item.id}>
+              {item.items.map((text) => (
+                <li className={classes.item} key={text.id}>
+                  {text.link ? (
+                    <NavLink
+                      to={text.link}
+                      className={({ isActive }) => (isActive ? classes.active : "")}
+                    >
+                      {text.text}
+                    </NavLink>
+                  ) : (
+                    <p>{text.text}</p>
+                  )}
+                </li>
+              ))}
+            </ul>
           ))}
         </div>
         <div className={classes.items_right}>

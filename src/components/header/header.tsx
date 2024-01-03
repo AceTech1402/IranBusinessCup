@@ -1,11 +1,9 @@
-// import React from 'react'
 import styles from "./header.module.css";
 import Navbar from "../navbar/navbar";
 import Button from "../button/button";
 import HeaderImage from "./../../assets/images/home/Men-Hero.png";
 import EuroBusinessCupImage from "./../../assets/images/home/euro-business-cup-image.svg";
 import BUSINESSImage from "./../../assets/images/home/BUSINESS.png";
-// import LinkToGS from "../link-to-golden-sports/linkToGS";
 
 export const Header = () => {
   return (

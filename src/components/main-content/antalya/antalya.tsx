@@ -1,5 +1,4 @@
 import classes from "./antalya.module.css";
-import multiple from "../../../assets/images/home/blueMultiple.svg";
 import Button from "../../button/button";
 import manAntalya from "../../../assets/images/home/man-antalya.png";
 import { XThreeIcon } from "../../svgs/svgs";

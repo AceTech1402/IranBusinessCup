@@ -25,7 +25,7 @@
 }
 
 .right {
-  @apply flex items-center justify-center w-full max-w-[888px] xs:max-w-[200px] relative z-[1]
+  @apply flex items-center justify-center w-full max-w-[888px] md:max-w-[200px] relative z-[1]
   /* overflow-hidden */
 }
 
@@ -90,6 +90,11 @@
 .left ul li:nth-child(1) .description .top {
   font-weight: 600;
   font-size: 28px;
+  position: relative;
+  z-index: 1;
+
+  @apply
+  lg:text-[3vw]
 }
 .left ul li .description .top>p {
   position: relative;
@@ -97,6 +102,9 @@
   font-size: 80px;
   font-family: "pinar FD VF";
   font-weight: 800;
+
+  @apply
+  lg:text-[10vw]
 }
 
 .left ul li .description .top>p.active::before {
@@ -106,13 +114,18 @@
   width: 90px;
   height: 19px;
   border-radius: 2px;
-  @apply bg-priary bottom-0 top-0 m-auto
+  @apply bg-priary bottom-0 top-0 m-auto lg:w-[12vw]
 }
 
 .left ul li .description .bottom {
   position: relative;
   font-family: "pinar";
   top: -30px;
+  font-size: 20px;
+  @apply
+  lg:-top-[3vw]
+  lg:text-[2vw]
+  sm:text-[3vw]
 }
 
 @media screen and (max-width: 500px) {
