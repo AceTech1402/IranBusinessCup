@@ -161,7 +161,7 @@ const Form = () => {
                 <div className={styles.text}>
                   <p>
                     <NavLink
-                      to="/register-rules"
+                      to="#"
                       className={styles.textBlue}
                     >
                       <span>قوانین ثبت نام ایران بیزنس کاپ </span>

@@ -8,6 +8,7 @@ import MenuIcon from "./../../assets/images/home/menu.svg";
 
 import paths from "../../constants/paths";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 const Navbar = () => {
   const [statusMenu, setStatusMenu] = useState<boolean>(false);

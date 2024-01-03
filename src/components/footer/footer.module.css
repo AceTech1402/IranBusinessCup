@@ -42,7 +42,7 @@
 
 .footer_wrapper .footer .items_left .items {
   color: #fff;
-  font-family: 'Pinar';
+  font-family: "Pinar";
   line-height: normal;
   @apply flex
     flex-col
@@ -91,22 +91,20 @@
     gap-y-[5px];
 }
 .footer_wrapper .footer .items_left .items li a {
+  color: #fff;
   @apply text-[16px]
-    font-[300]
-    text-gray
+    font-[400]
     font-["pinar"];
 }
 .footer_wrapper .footer .items_left .items li a.active {
-  @apply
-  text-priary
+  @apply text-priary;
 }
 .footer_wrapper .footer .items_left .items li p {
   @apply text-[#757575];
 }
 
 .footer_wrapper .footer .items_right {
-  @apply 
-  /* w-full */
+  @apply /* w-full */
     /* max-w-[500px] */
     /* pt-[59px] */
     /* pb-[42px] */
@@ -133,9 +131,9 @@
 }
 
 .footer_wrapper .footer .items_right .item .title {
-  font-family: 'Pinar';
-    font-size: 16px;
-    line-height: normal;
+  font-family: "Pinar";
+  font-size: 16px;
+  line-height: normal;
   @apply text-priary
     font-[600];
 }

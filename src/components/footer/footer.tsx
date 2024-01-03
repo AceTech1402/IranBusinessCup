@@ -26,7 +26,7 @@ const ItemsFooter: ItemsFooterType[] = [
       {
         id: 2,
         text: "ارتباط با ما",
-        link: "https://goldensports.at/impressum",
+        // link: "https://goldensports.at/impressum",
       },
       { id: 3, text: " نتایج/برنامه بازی" },
       { id: 4, text: " خانه", link: "/" },
@@ -36,8 +36,8 @@ const ItemsFooter: ItemsFooterType[] = [
     id: 2,
     title: "Über die Business League",
     items: [
-      { id: 1, text: "قوانین بازی", link: "/playing-rules" },
-      { id: 2, text: "قوانین ثبت نام", link: "/register-rules" },
+      { id: 1, text: "قوانین بازی"},
+      { id: 2, text: "قوانین ثبت نام"},
     ],
   },
 ];
@@ -48,7 +48,7 @@ const cantactus = [
     title: "ارتباط  با  ما",
     items: [
       { id: 1, icon: call, text: "02144464914" },
-      { id: 2, icon: SmsIcon, text: "Support@goldensports.at" },
+      { id: 2, icon: SmsIcon, text: "info@eramond.ir" },
       {
         id: 3,
         icon: LocationIcon,
