@@ -1,8 +1,5 @@
 import classes from "./popup.module.css";
 
-// import SuccessIcon from "./../../icons/tick.svg";
-// import ErrorIcon from "./../../icons/close.svg";
-// import WarnningIcon from "./../../icons/danger.svg";
 import { NavLink } from "react-router-dom";
 
 interface propsType {

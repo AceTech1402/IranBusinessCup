@@ -5,7 +5,6 @@ import styles from "./navbar.module.css";
 import Logo from "./../../assets/images/home/logo.svg";
 import LogoDark from "./../../assets/images/home/logo-dark.svg";
 import MenuIcon from "./../../assets/images/home/menu.svg";
-import DarkMenuIcon from "./../../assets/images/home/menu-dark.svg";
 
 import paths from "../../constants/paths";
 import { Link } from "react-router-dom";

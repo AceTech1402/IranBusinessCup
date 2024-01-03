@@ -1,7 +1,5 @@
 import { HashLink } from "react-router-hash-link";
 
-import ArrowRightIcon from "./../../assets/images/home/next.svg";
-
 import styles from "./button.module.css";
 
 interface proptsType {
@@ -20,7 +18,6 @@ const Button: React.FC<proptsType> = ({
   linkto,
   children,
   type,
-  // disabled = false,
   btnColor,
   onClick,
 }) => {

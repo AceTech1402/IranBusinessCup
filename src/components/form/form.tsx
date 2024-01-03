@@ -1,9 +1,7 @@
-// import React from 'react'
 import Button from "../button/button";
 import styles from "./form.module.css";
 import { useForm } from "react-hook-form";
-// import { yupResolver } from "@hookform/resolvers/yup";
-// import * as yup from "yup";
+
 
 import ShapeZarbdarImage from "./../../assets/images/home/Group 46.svg";
 import { NavLink } from "react-router-dom";
@@ -23,15 +21,6 @@ interface FormDataType {
 }
 
 const Form = () => {
-  // const schema = yup.object({
-  //   Firstname: yup.string().required("this field is required"),
-  //   Lastname: yup.string().required("this field is required"),
-  //   Companyname: yup.string().required("this field is required"),
-  //   Email: yup.string().required("this field is required"),
-  //   address: yup.string().required("this field is required"),
-  //   Zipcode: yup.string().required("this field is required"),
-  //   AccessPrivacy: yup.boolean().required("please accept this field.")
-  // });
   const email_regular =
     /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 

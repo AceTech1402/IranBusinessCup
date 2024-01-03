@@ -1,5 +1,3 @@
-// import React from 'react'
-// import Card from "../card/card";
 import { CalendarIcon, MapIcon, XThreeIcon } from "../svgs/svgs";
 import classes from "./homeTehranBaner.module.css";
 import TehranImage from "./../../assets/images/home/tehran-image.png";
