@@ -3,7 +3,7 @@
 }
 
 .wrapperNavbar.dark {
-  @apply relative
+  @apply relative bg-black top-0 py-3
 }
 
 .cover {
@@ -70,7 +70,7 @@
 }
 
 .wrapperNavbar.dark .navbar ul li a {
-  @apply text-black
+  @apply text-white
 }
 
 .navbar ul li a.active {
@@ -87,7 +87,7 @@
 }
 
 .wrapper1 {
-  @apply w-full flex items-center justify-between md:w-[230px] md:h-screen md:duration-300 md:fixed md:z-30 md:-left-[300px] md:backdrop-blur-[10px] md:rounded-[10px] md:border-[1px] md:border-white md:pb-20 md:top-0 md:p-5
+  @apply w-full flex items-center justify-between md:w-[230px] md:h-[100dvh] md:duration-300 md:fixed md:z-30 md:-left-[300px] md:backdrop-blur-[10px] md:rounded-[10px] md:border-[1px] md:border-white md:pb-20 md:top-0 md:p-5 md:flex-col
 }
 
 .wrapper1 > a {

@@ -172,7 +172,7 @@ const Form = () => {
                 <div className={styles.text}>
                   <p>
                     <NavLink
-                      to="https://www.goldensports.at/events-agb"
+                      to="/register-rules"
                       className={styles.textBlue}
                     >
                       <span>قوانین ثبت نام ایران بیزنس کاپ </span>

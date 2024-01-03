@@ -90,14 +90,17 @@
     justify-start
     gap-y-[5px];
 }
-.footer_wrapper .footer .items_left .items ul li a {
-  @apply text-[20px]
+.footer_wrapper .footer .items_left .items li a {
+  @apply text-[16px]
     font-[300]
     text-gray
-    font-[Raleway];
+    font-["pinar"];
 }
-
-.footer_wrapper .footer .items_left .items ul li p {
+.footer_wrapper .footer .items_left .items li a.active {
+  @apply
+  text-priary
+}
+.footer_wrapper .footer .items_left .items li p {
   @apply text-[#757575];
 }
 
