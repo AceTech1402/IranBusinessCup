@@ -14,7 +14,7 @@ import { Services } from "../services/services";
 const MainContent = () => {
   return (
     <>
-      <div className={`${classes.main_content_wrapper} shape-box`}>
+      <div className={classes.main_content_wrapper}>
         <div className={classes.main_content}>
           <div className={classes.right}>
             <XThreeIcon theme="not white" size="small"/>

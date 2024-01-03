@@ -272,13 +272,13 @@ li {
 }
 
 .shape-box::before {
-  background: url("./assets/images/home/shape-top.svg") round;
+  background: url("./assets/images/home/parallelogram-top.svg") round;
   content: "";
-  @apply absolute top-0 right-0 w-full max-w-[542px] h-[542px] flex bg-cover -z-[1] sm:hidden
+  @apply absolute top-0 left-0 w-full max-w-[380px] h-[380px] flex bg-cover -z-[1] sm:hidden
 }
 
 .shape-box::after {
   background: url("./assets/images/home/shape-bottom.svg") round;
   content: "";
-  @apply absolute bottom-0 left-0 w-full max-w-[363px] h-[363px] flex bg-cover -z-[1] md:hidden sm:hidden
+  @apply absolute bottom-0 right-0 w-full max-w-[300px] h-[300px] flex bg-cover -z-[1] md:hidden sm:hidden rotate-180
 }

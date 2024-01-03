@@ -1,5 +1,5 @@
 .form {
-  @apply flex flex-col items-center pt-20 pb-40 px-[80px] xl:px-[40px] sm:px-[26px]
+  @apply flex flex-col items-center pt-[136px] pb-[100px] px-[80px] xl:px-[40px] sm:px-[26px]
 }
 
 .formTitle {

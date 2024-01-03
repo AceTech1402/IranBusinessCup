@@ -1,6 +1,12 @@
 .main_content_wrapper {
   font-family: "Pinar FD VF";
-  @apply w-full flex justify-center items-start flex-col py-[150px];
+  @apply w-full relative flex justify-center items-start flex-col pt-[100px];
+}
+
+.main_content_wrapper::before {
+  background: url("../../assets/images/home/parallelogram-top.svg") round;
+  content: "";
+  @apply absolute top-0 left-0 w-full max-w-[380px] h-[380px] flex bg-cover -z-[1] sm:hidden
 }
 
 .main_content_wrapper .main_content {
