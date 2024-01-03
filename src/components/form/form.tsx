@@ -17,8 +17,8 @@ interface FormDataType {
   Lastname: string;
   Companyname: string;
   Email: string;
-  phoneNumber: string;
-  Location: string;
+  mobile: string;
+  address: string;
   AccessPrivacy: boolean;
 }
 
@@ -28,7 +28,7 @@ const Form = () => {
   //   Lastname: yup.string().required("this field is required"),
   //   Companyname: yup.string().required("this field is required"),
   //   Email: yup.string().required("this field is required"),
-  //   Location: yup.string().required("this field is required"),
+  //   address: yup.string().required("this field is required"),
   //   Zipcode: yup.string().required("this field is required"),
   //   AccessPrivacy: yup.boolean().required("please accept this field.")
   // });
@@ -56,8 +56,8 @@ const Form = () => {
       l_name: data.Lastname,
       company_name: data.Companyname,
       email: data.Email,
-      phoneNumber: data.phoneNumber,
-      location: data.Location,
+      mobile: data.mobile,
+      address: data.address,
     };
     handle_register(dataForm);
   };
@@ -137,11 +137,11 @@ const Form = () => {
               <input
                 type="text"
                 className={styles.borderInput}
-                {...register("phoneNumber", {
+                {...register("mobile", {
                   required: "لطفا شماره تماس خود را وارد کنید",
                 })}
               />
-              <p className={styles.para}>{errors.Email?.message}</p>
+              <p className={styles.para}>{errors.mobile?.message}</p>
             </div>
           </div>
           <div className={styles.oneColumn}>
@@ -150,11 +150,11 @@ const Form = () => {
               <input
                 type="text"
                 className={styles.borderInput}
-                {...register("Location", {
+                {...register("address", {
                   required: "لطفا ادرس شرکت خود را وارد کنید",
                 })}
               />
-              <p className={styles.para}>{errors.Location?.message}</p>
+              <p className={styles.para}>{errors.address?.message}</p>
             </div>
           </div>
           <div className={styles.checkButton}>

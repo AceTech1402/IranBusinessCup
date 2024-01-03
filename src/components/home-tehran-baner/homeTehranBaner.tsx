@@ -38,7 +38,7 @@ const HomeTehranBaner: React.FC = () => {
             <div className={classes.items}>
               <ul>
                 {itemsOfGhore.map((item) => (
-                  <li>
+                  <li key={item.id}>
                     <div className={classes.icon}>{item.icon}</div>
                     <div className={classes.text}>
                       <p>{item.text}</p>

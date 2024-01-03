@@ -24,6 +24,7 @@
 .popup_wrapper{
     filter: drop-shadow(6px 6px 15px rgba(0, 0, 0, 0.6));
     backdrop-filter: blur(60px);
+    font-family: "pinar fd vf";
     border-radius: 12px;
     @apply
     fixed
@@ -107,7 +108,7 @@
 
 .popup_wrapper .header .text {
     @apply
-    text-[36px]
+    text-[30px]
     font-[600]
     leading-[42.19px]
 }
@@ -128,7 +129,7 @@
 .popup_wrapper .body .text {
     @apply
     w-full
-    text-[20px]
+    text-[18px]
     leading-[26px]
     mb-[30px]
     text-[#ffffff]
@@ -145,7 +146,7 @@
     items-center
     justify-center
     text-center
-    text-[20px]
+    text-[18px]
     font-[700]
     mt-auto
 }

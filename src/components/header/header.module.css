@@ -58,7 +58,7 @@
 
 .text_wrapper .title h1 p {
   @apply
-  text-[3vw]
+  text-[2.8vw]
   leading-[5.5vw]
   lg:text-[5vw]
   lg:leading-[10vw]

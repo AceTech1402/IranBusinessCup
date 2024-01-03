@@ -9,7 +9,6 @@ import LinkToGS from "../../components/link-to-golden-sports/linkToGS";
 const ResultSchedule = () => {
   return (
     <>
-      <LinkToGS />
       <Helmet>
         <title>Result/schedule | tables</title>
       </Helmet>

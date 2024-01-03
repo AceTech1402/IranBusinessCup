@@ -1,10 +1,10 @@
 .playingRulesWrapper {
   width: 100%;
-  padding: 68px 100px;
+  padding: 68px 100px 200px;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: 12px;
+  gap: 16px;
   flex-direction: column;
   font-family: "pinar";
 

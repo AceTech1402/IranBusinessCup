@@ -121,8 +121,11 @@
   position: relative;
   font-family: "pinar";
   top: -30px;
+  font-size: 20px;
   @apply
   lg:-top-[3vw]
+  lg:text-[2vw]
+  sm:text-[3vw]
 }
 
 @media screen and (max-width: 500px) {
