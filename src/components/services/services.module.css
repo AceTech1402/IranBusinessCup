@@ -16,7 +16,7 @@
   relative
   flex
   gap-5
-  mb-[146px];
+  lg:mb-[490px];
 }
 
 .right {
