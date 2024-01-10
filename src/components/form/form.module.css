@@ -6,16 +6,20 @@
   font-family: "pinar FD VF";
   font-weight: 800;
   @apply flex gap-[27px] sm:gap-[14px]
+  sm:justify-between
+  sm:w-full
 }
 
 .formTitle img {
-  @apply w-[132px] sm:w-[100px]
+  @apply w-[132px] sm:w-[85px]
 }
 
 .register {
   font-family: "pinar FD VF";
   font-weight: 800;
-  @apply text-[50px] text-priary font-extrabold xs:text-[32px] sm:text-[32px] md:text-[32px] xxl:text-[50px] xl:text-[50px] lg:text-[50px]
+  white-space: nowrap;
+  line-height: normal;
+  @apply text-[50px] text-priary font-extrabold xs:text-[32px] sm:text-[24px] md:text-[32px] xxl:text-[50px] xl:text-[50px] lg:text-[50px]
 }
 
 .inputsWrapper {

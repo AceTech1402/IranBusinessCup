@@ -1,6 +1,17 @@
 .sectionWrapper {
   background: url("../../../assets/images/home/bg-antalya.png") round;
-  @apply w-[100%] flex items-center mb-[78px] mt-[202px] relative lg:hidden sm:hidden px-[100px] py-[80px] justify-between pl-[450px]
+  @apply w-[100%]
+  flex
+  items-center
+  mb-[78px]
+  mt-[202px]
+  relative
+  lg:hidden
+  sm:hidden
+  px-[100px]
+  py-[80px]
+  justify-between
+  pl-[450px]
 }
 
 .sectionWrapper::before {
@@ -17,6 +28,7 @@
 
 .multipleImg {
   @apply w-[36px]
+  
 }
 
 .texts {

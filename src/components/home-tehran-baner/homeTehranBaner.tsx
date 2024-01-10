@@ -1,4 +1,4 @@
-import { MapIcon, XThreeIcon } from "../svgs/svgs";
+import { CalendarIcon, MapIcon, XThreeIcon } from "../svgs/svgs";
 import classes from "./homeTehranBaner.module.css";
 import TehranImage from "./../../assets/images/home/tehran-image.png";
 
@@ -9,11 +9,11 @@ const HomeTehranBaner: React.FC = () => {
       icon: <MapIcon />,
       text: "تهران، هتل اسپیناس پالاس",
     },
-    // {
-    //   id: 2,
-    //   icon: <CalendarIcon />,
-    //   text: "16  بهمن",
-    // },
+    {
+      id: 2,
+      icon: <CalendarIcon />,
+      text: "پنجشنبه، 12  بهمن",
+    },
   ];
 
   return (
@@ -29,7 +29,7 @@ const HomeTehranBaner: React.FC = () => {
             </div>
             <div className={classes.description}>
               <p>
-                مراسم قرعه کشی و افتتاحیه تورنومنت در هتل اسپیناس پالاس برگزار
+                مراسم قرعه کشی و افتتاحیه تورنمنت در هتل اسپیناس پالاس برگزار
                 خواهد شد.
               </p>
             </div>

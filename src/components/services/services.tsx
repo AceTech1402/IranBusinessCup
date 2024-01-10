@@ -17,14 +17,14 @@ const services: ServiceType[] = [
   {
     id: "2",
     img: serviceImg2,
-    title: "ضبط و پخش بازی",
-    description: "ضبط و پخش تمامی بازی ها به صورت زنده (Live Stream)",
+    title: "نشست های  B2B",
+    description: "ایجاد بستری برای شکل گیری روابط موثر بین شرکتی ",
   },
   {
     id: "3",
     img: serviceImg3,
-    title: "پخش مستقیم نتایج",
-    description: "ارائه ی  نتایج هر بازی به صورت زنده (Live Score) ",
+    title: "ضبط و پخش بازی و نتایج",
+    description: "ارائه‌ی نتایج هر بازی به صورت زنده (Live Score) و ارائه‌ی ویدیو بازی‌ها با جلوه‌های گرافیکی",
   },
   {
     id: "4",

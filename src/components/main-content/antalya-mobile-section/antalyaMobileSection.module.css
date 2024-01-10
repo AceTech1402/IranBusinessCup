@@ -1,6 +1,16 @@
 .sectionWrapper {
   position: relative;
-  @apply w-[100%] flex-col mt-[65px] mb-[78px] hidden lg:flex sm:flex xs:flex
+  background-image: url("./../../../assets/images/home/antalya-mobile.png");
+  background-repeat: no-repeat;
+  padding: 16px;
+  background-size: cover;
+  height: 205vw;
+  width: 100%;
+  min-width: 345px;
+  color: #fff;
+  @apply w-[100%] flex-col mt-[65px] mb-[78px] hidden pt-[60px] lg:flex sm:flex xs:flex
+  /* bg-[url('./../../../assets/images/home/antalya-mobile.png')]
+  bg-no-repeat */;
 }
 
 .imgWrapper {
@@ -12,53 +22,69 @@
 }
 
 .textsWrapper {
-  @apply flex flex-col gap-[23px] pt-[77px] px-[10px] w-[100%] items-center
+  @apply flex flex-col gap-[23px] pt-[77px] px-[10px] w-[100%] items-center;
 }
 
 .topWrapper {
-  @apply flex gap-[9px] ml-auto
+  @apply flex gap-[9px] ml-auto;
 }
 
 .title {
-  @apply flex gap-[15px] -mt-[15px] whitespace-nowrap
+  @apply flex gap-[15px] -mt-[15px] whitespace-nowrap;
 }
 
 .sayHello p {
   font-family: "pinar";
-  @apply font-[600] text-[30px] text-priary sm:text-[7vw]
+  font-size: 28px;
+  line-height: normal;
+  @apply font-[600] text-[30px] sm:text-[7vw];
 }
 
 .textWrapper h1 {
-  @apply font-[400] text-[60px] text-priary font-[Ammhenthi] -mt-[18px] sm:text-[18vw]
+  line-height: 130px;
+  @apply font-[400]
+  text-[100px]
+  font-[Ammhenthi]
+  -mt-[18px]
+  sm:mt-0
+  sm:text-[81px];
 }
 
 .multipleWrapper {
   @apply w-[18px]
   /* -mb-[20px] */
   flex items-start justify-center
+  sm:hidden;
 }
 
 .multipleWrapper svg {
-  @apply max-w-full max-h-full object-contain h-auto
+  @apply max-w-full max-h-full object-contain h-auto;
 }
 
 .detail p {
-  @apply text-black font-[500] text-[14px] font-['noora']
+  text-align: right;
+  line-height: 30px;
+  letter-spacing: 0.28px;
+  @apply font-[500] text-[14px] font-['noora'] mb-[24px];
 }
 
-.imgWrapper>img {
+.imgWrapper > img {
   position: absolute;
   z-index: 1;
   bottom: 0;
   background-size: cover;
-  @apply w-[346px] h-[509px] object-contain
+  @apply w-[346px] h-[509px] object-contain;
 }
 
 .imgWrapper::before {
   content: "";
   position: absolute;
   opacity: 0.8;
-  background: linear-gradient(360deg, #171717 0.54%, rgba(33, 33, 33, 0.00) 116.46%);
+  background: linear-gradient(
+    360deg,
+    #171717 0.54%,
+    rgba(33, 33, 33, 0) 116.46%
+  );
   width: 100%;
   height: 418px;
   bottom: 0;
@@ -78,5 +104,5 @@
 }
 
 .button {
-  @apply w-[100%] flex justify-center
+  @apply w-[100%] flex justify-center;
 }

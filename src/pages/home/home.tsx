@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>Home</title>
+        <title>ایران بیزینس کاپ</title>
       </Helmet>
       <Header />
       <MainContent />

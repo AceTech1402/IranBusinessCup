@@ -274,7 +274,7 @@ li {
 .shape-box::before {
   background: url("./assets/images/home/parallelogram-top.svg") round;
   content: "";
-  @apply absolute top-0 left-0 w-full max-w-[380px] h-[380px] flex bg-cover -z-[1] sm:hidden
+  @apply absolute top-0 left-0 w-full max-w-[330px] h-[330px] flex bg-cover -z-[1] sm:hidden
 }
 
 .shape-box::after {

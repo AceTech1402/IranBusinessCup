@@ -4,24 +4,22 @@
   align-items: center;
   justify-content: flex-start;
   position: relative;
-  /* background-repeat: no-repeat; */
-  /* background-position: 0px 100%; */
-  /* max-height: 509px; */
-  /* padding-top: 174px; */
-
-  @apply md:flex-col-reverse;
+  background-repeat: no-repeat;
+  background-size: contain;
+  @apply
+  md:flex-col-reverse
+  md:justify-end
+  md:bg-[url('./../../assets/images/home/espinas-palace-mobile.png')]
+  md:h-[170vw]
 }
 
-/* .main_content_wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-} */
 .image {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  @apply
+  md:hidden
 }
 
 .image img {
@@ -39,7 +37,7 @@
   gap: 29px;
   position: absolute;
 
-  @apply md:relative md:px-[10px] md:py-0 md:pt-[20px];
+  @apply md:relative md:px-[16px] md:py-0 md:pt-[42px];
 }
 
 .main_content_wrapper .textWrapper .title {
@@ -47,7 +45,7 @@
   font-family: "pinar FD VF";
   font-weight: 700;
   font-size: 2.5vw;
-  @apply text-white md:text-priary md:text-2xl;
+  @apply text-white md:text-2xl;
 }
 
 .main_content_wrapper .textWrapper .multiIcon {
@@ -55,6 +53,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  @apply
+  md:hidden
 }
 
 .main_content_wrapper .textWrapper .multiIcon svg {
@@ -73,7 +73,7 @@
   justify-content: flex-start;
   max-width: 507px;
   gap: 16px;
-
+  color: #fff;
   @apply md:max-w-none;
 }
 
@@ -83,7 +83,7 @@
   font-size: 18px;
   font-weight: 400;
   letter-spacing: 0.36px;
-  @apply text-white md:text-black md:text-base;
+  @apply text-white md:text-base;
 }
 
 .main_content_wrapper .textWrapper .text .items {
@@ -94,7 +94,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  row-gap: 20px;
+  row-gap: 10px;
   column-gap: 60px;
   flex-wrap: wrap;
 }
@@ -123,13 +123,15 @@
   object-fit: contain;
 }
 
-.main_content_wrapper .textWrapper .text .items ul li .icon svg path {
+/* .main_content_wrapper .textWrapper .text .items ul li .icon svg path {
   @apply md:stroke-black;
-}
+} */
 
 .main_content_wrapper .textWrapper .text .items ul li .text {
   font-family: "pinar FD VF";
   font-size: 1vw;
   font-weight: 600;
-  @apply text-white md:text-black md:text-base;
+  font-size: 20px;
+  font-weight: 400;
+  @apply text-white md:text-base;
 }

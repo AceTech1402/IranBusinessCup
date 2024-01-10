@@ -1,6 +1,6 @@
 .main_content_wrapper {
   font-family: "Pinar FD VF";
-  @apply w-full flex justify-center items-start flex-col py-[150px] sm:px-[26px];
+  @apply w-full flex justify-center items-start flex-col py-[150px] sm:px-[16px];
 }
 
 .servicesSection {
@@ -8,67 +8,104 @@
   /* pb-[190px] */
   pl-[105px]
   pr-[48px]
-  sm:px-[26px]
-  xl:px-[40px]
   w-full
   max-w-[1598px]
   relative
   flex
   gap-5
-  lg:mb-[490px];
+  xl:px-[40px]
+  /* lg:mb-[490px] */
+  sm:px-[16px];
 }
 
 .right {
   top: 20px;
   position: relative;
   height: fit-content;
+  @apply
+  sm:hidden
 }
 
 .title {
-  font-size: 36px;
   line-height: normal;
   @apply text-priary
-  font-bold;
+  font-bold
+  text-[36px]
+  sm:text-[20px];
 }
 
 .left {
   @apply flex
   flex-col
   gap-[82px]
+  sm:gap-[30px]
   w-full;
 }
 
 .servicesSection .services {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: space-around;
   gap: 30px;
   width: 100%;
   @apply xl:flex-wrap;
 }
 
+
 .services > .service {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 24px;
-  max-width: 195px;
+  @apply
+  max-w-[230px]
+  xl:max-w-[195px]
+  sm:max-w-none
+  sm:w-full
+  sm:flex-row
+}
+
+.services > .service:nth-child(2) > .text > h2 {
+  font-family: 'pinar';
+}
+
+.services > .service:nth-child(2) > .imgContainer > img {
+  @apply
+  relative
+  top-[10px]
+  sm:top-[50px]
+  sm:w-[140px]
+  sm:h-[186px]
 }
 
 .service > .imgContainer {
   background-image: url("./../../assets/images/home/services/green-background.svg");
   background-repeat: no-repeat;
   background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
   width: 188px;
   height: 185px;
+  @apply
+  flex
+  justify-center
+  items-end
+  w-[188px]
+  h-[180px]
+  sm:w-[143px]
+  sm:h-[125px]
+  sm:min-w-[163px]
+  sm:min-h-[125px]
 }
 
 .imgContainer > img {
+  
   width: 160px;
   height: 167px;
+  @apply
+  sm:w-[110px]
+  sm:h-[115px]
+  object-contain
+  /* sm:w-[143px]
+  sm:h-[140px] */
 }
 
 .service > .text {
@@ -76,10 +113,13 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  @apply
+  sm:text-right
 }
 
 .text > h2 {
   font-size: 20px;
   font-weight: 700;
   line-height: normal;
+  width: 100%;
 }

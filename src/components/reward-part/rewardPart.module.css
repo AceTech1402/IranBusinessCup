@@ -1,58 +1,97 @@
 .rewardPart {
-  @apply flex gap-8 w-full items-center justify-between bg-neutral-900 overflow-hidden px-[80px] lg:flex-col-reverse lg:items-center lg:pb-[20px] xxl:flex xl:flex lg:flex sm:px-[10px]
+  @apply 
+  flex
+  /* gap-8 */
+  w-full
+  items-center
+  justify-between
+  bg-neutral-900
+  overflow-hidden
+  pr-[35px]
+  lg:flex-col-reverse
+  lg:items-center
+  lg:pb-[20px]
+  xxl:flex
+  xl:flex
+  lg:flex
+  md:px-[16px]
 }
 
 .left {
-  @apply flex gap-5
+  @apply 
+  flex 
+  gap-5
+  w-full
+  py-[50px]
 }
 
 .title {
-  @apply text-priary font-extrabold font-["pinar"]
-  /* text-3xl */
-  text-[50px] sm:text-[36px]
+  line-height: normal;
+  @apply 
+  text-priary 
+  font-bold
+  font-["pinar"]
+  text-[36px]
+  sm:text-[20px]
 }
 
 .texts {
-  @apply flex flex-col gap-5
+  @apply 
+  flex
+  flex-col
+  gap-5
+  w-full
 }
 
 .text {
-  @apply text-white text-[18px]
+  @apply 
+  text-white
+  text-[18px]
+  w-full
 }
 
 .Multiple {
-  @apply min-w-fit
+  @apply 
+  min-w-fit
+  sm:hidden
 }
 
 .right {
-  @apply flex items-center justify-center w-full max-w-[888px] md:max-w-[200px] relative z-[1]
-  /* overflow-hidden */
+  @apply
+  flex
+  items-center
+  justify-end
+  w-full
+  max-w-[888px]
+  md:max-w-[600px]
+  relative z-[1]
+  lg:justify-center
 }
 
-.right::before {
+/* .right::before {
   content: "";
   background: url("./../../assets/images/home/bg-reward-image.svg") round;
   background-size: contain;
   background-position: 50%;
   @apply absolute w-[1104px] h-full -z-[1] top-0 bg-no-repeat
-  /* lg:w-[100%] */
-  xs:right-auto xs:bg-cover xs:w-[400px]
-}
+  sm:right-auto sm:bg-cover sm:w-[307px]
+} */
 
 .left ul {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
   flex-direction: column;
-  margin-top: 40px;
 }
 
 .left ul li {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 30px;
+  gap: 48px;
   white-space: nowrap;
+  @apply
+  sm:gap-[38px]
 }
 
 .left ul li .rewardTitle {
@@ -86,35 +125,50 @@
   font-family: "pinar FD VF";
   gap: 20px;
   font-size: 20px;
+  @apply
+  sm:gap-[15px]
 }
+
+.left ul li .description .top > p {
+  position: relative;
+  z-index: 1;
+  font-size: 52px;
+  font-family: "pinar FD VF";
+  font-weight: 800;
+  
+  @apply
+  lg:text-[10vw]
+}
+
 .left ul li:nth-child(1) .description .top {
   font-weight: 600;
   font-size: 28px;
   position: relative;
   z-index: 1;
+  /* line-height: normal; */
+  /* font-size: 20px; */
 
   @apply
   lg:text-[3vw]
+  sm:text-[20px]
 }
-.left ul li .description .top>p {
-  position: relative;
-  z-index: 1;
+
+.left ul li:nth-child(1) .description .top > p {
   font-size: 80px;
-  font-family: "pinar FD VF";
-  font-weight: 800;
-
   @apply
-  lg:text-[10vw]
+  sm:text-[60px]
 }
 
-.left ul li .description .top>p.active::before {
+.left ul li .description .top > p.active::before {
   content: "";
   position: absolute;
   z-index: -1;
-  width: 90px;
+  width: 105px;
   height: 19px;
   border-radius: 2px;
+  right: -12px;
   @apply bg-priary bottom-0 top-0 m-auto lg:w-[12vw]
+  sm:w-[79px]
 }
 
 .left ul li .description .bottom {
@@ -122,11 +176,19 @@
   font-family: "pinar";
   top: -30px;
   font-size: 20px;
+  line-height: normal;
   @apply
   lg:-top-[3vw]
   lg:text-[2vw]
-  sm:text-[3vw]
+  sm:text-[16px]
 }
+
+/* .left ul li .description .bottom {
+  font-size: 16px;
+  line-height: normal;
+  @apply
+  sm:text
+} */
 
 @media screen and (max-width: 500px) {
   .left ul li {

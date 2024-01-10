@@ -1,8 +1,19 @@
 .resultScheduleContent {
-  @apply
-  pt-[86px]
+  @apply pt-[86px]
   flex
   flex-col
-  items-center
+  items-start
   gap-[100px]
+  px-4;
+}
+
+.resultScheduleContent > h2 {
+  text-align: right;
+  font-family: 'Pinar';
+  line-height: normal;
+  @apply
+  text-priary
+  font-bold
+  text-[36px]
+  sm:text-[20px];
 }

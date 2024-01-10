@@ -3,7 +3,7 @@ import classes from "./mainContent.module.css";
 import AntalyaSection from "./antalya/antalya";
 import AntalyaMobileSection from "./antalya-mobile-section/antalyaMobileSection";
 import HomeTehranBaner from "../home-tehran-baner/homeTehranBaner";
-import { XThreeIcon } from "../svgs/svgs";
+import { CalendarIcon, MapIcon, XThreeIcon } from "../svgs/svgs";
 import RewardPart from "../reward-part/rewardPart";
 import { Services } from "../services/services";
 
@@ -27,7 +27,7 @@ const MainContent = () => {
                 اروپا انجام خواهد شد.
               </p>
             </div>
-            {/* <div className={classes.details}>
+            <div className={classes.details}>
               <div className={classes.detail}>
                 <span className={classes.icon}>
                   <MapIcon color="#636363" />
@@ -38,9 +38,9 @@ const MainContent = () => {
                 <span className={classes.icon}>
                   <CalendarIcon color="#636363" />
                 </span>
-                <span className={classes.txt}>14 تا 16 بهمن</span>
+                <span className={classes.txt}>14 تا 18 بهمن</span>
               </div>
-            </div> */}
+            </div>
           </div>
         </div>
         {/* ///////////////////////////////antalya section//////////////////////////// */}

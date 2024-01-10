@@ -1,6 +1,5 @@
 import React from "react";
 import { createBrowserRouter } from "react-router-dom";
-import Paths from "../constants/paths";
 import { PlayingRules } from "../pages/playing-rules/playingRules";
 import { RegisterRules } from "../pages/register-rules/registerRules";
 const Home = React.lazy(() => import("../pages/home/home"));
@@ -9,11 +8,11 @@ const Result = React.lazy(
 );
 const PlayOff = React.lazy(() => import("../pages/play-off/playOff"));
 const Router = createBrowserRouter([
-  { path: Paths.HOME, element: <Home /> },
-  { path: Paths.RESULT, element: <Result /> },
-  { path: Paths.PLAYOFF, element: <PlayOff /> },
-  { path: Paths.playingRules, element: <PlayingRules /> },
-  { path: Paths.registerRules, element: <RegisterRules /> },
+  { path: "/", element: <Home /> },
+  { path: "/result-schedule", element: <Result /> },
+  { path: "/play-off", element: <PlayOff /> },
+  { path: "/playing-rules", element: <PlayingRules /> },
+  { path: "/register-rules", element: <RegisterRules /> },
 ]);
 
 export default Router;
