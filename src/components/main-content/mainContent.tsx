@@ -38,7 +38,7 @@ const MainContent = () => {
                 <span className={classes.icon}>
                   <CalendarIcon color="#636363" />
                 </span>
-                <span className={classes.txt}>14 تا 18 بهمن</span>
+                <span className={classes.txt}>15 تا 17 بهمن</span>
               </div>
             </div>
           </div>

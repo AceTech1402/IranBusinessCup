@@ -83,7 +83,7 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  to="#"
+                  to="/playing-rules"
                   // className={({ isActive }) => {
                   //   return isActive ? styles.active : "";
                   // }}
@@ -173,7 +173,102 @@ const Navbar = () => {
                       />
                     </svg>
                   </div>
-                  <p>نتایج / برنامه بازی</p>
+                  <p>قوانین بازی</p>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/register-rules"
+                  // className={({ isActive }) => {
+                  //   return isActive ? styles.active : "";
+                  // }}
+                  // onClick={() => toggleStatusMenu()}
+                >
+                  <div className={styles.image}>
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M6.66666 1.6665V4.1665"
+                        stroke="#F0A04D"
+                        strokeWidth="1.5"
+                        strokeMiterlimit="10"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                      <path
+                        d="M13.3333 1.6665V4.1665"
+                        stroke="#F0A04D"
+                        strokeWidth="1.5"
+                        strokeMiterlimit="10"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                      <path
+                        d="M2.91666 7.5752H17.0833"
+                        stroke="#F0A04D"
+                        strokeWidth="1.5"
+                        strokeMiterlimit="10"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                      <path
+                        d="M17.5 7.08317V14.1665C17.5 16.6665 16.25 18.3332 13.3333 18.3332H6.66667C3.75 18.3332 2.5 16.6665 2.5 14.1665V7.08317C2.5 4.58317 3.75 2.9165 6.66667 2.9165H13.3333C16.25 2.9165 17.5 4.58317 17.5 7.08317Z"
+                        stroke="#F0A04D"
+                        strokeWidth="1.5"
+                        strokeMiterlimit="10"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                      <path
+                        d="M13.0789 11.4167H13.0864"
+                        stroke="#F0A04D"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                      <path
+                        d="M13.0789 13.9167H13.0864"
+                        stroke="#F0A04D"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                      <path
+                        d="M9.99623 11.4167H10.0037"
+                        stroke="#F0A04D"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                      <path
+                        d="M9.99623 13.9167H10.0037"
+                        stroke="#F0A04D"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                      <path
+                        d="M6.91194 11.4167H6.91942"
+                        stroke="#F0A04D"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                      <path
+                        d="M6.91194 13.9167H6.91942"
+                        stroke="#F0A04D"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </div>
+                  <p>قوانین ثبت نام</p>
                 </Link>
               </li>
               {/* <li className={`${styles.last}`}>

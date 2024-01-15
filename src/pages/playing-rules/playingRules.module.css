@@ -4,38 +4,132 @@
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: 20px;
+  gap: 40px;
   flex-direction: column;
   font-family: "pinar";
 
-  @apply
-  lg:py-[32px]
-  lg:px-[20px]
+  @apply lg:py-[32px]
+  lg:px-[20px];
 }
 
 .playingRulesWrapper > .title {
   font-weight: 700;
   font-size: 36px;
+  @apply text-priary
+  sm:text-[26px];
+}
+
+.playingRulesWrapper .extraTxt {
+  display: block ;
+}
+
+.regulationSection > h3,
+.rulesSection > h3 {
+  color: #000;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: normal;
   @apply
-  text-priary
-  sm:text-[26px]
+  mb-[32px]
+}
+
+.regulationSection .regulationTopic,
+.rulesSection .rules,
+.rules .rule {
+  @apply
+  mb-[32px]
+}
+
+.regulationSection .regulationTopic > h4,
+.rules > .rule > h4 {
+  color: #000;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: normal;
+  @apply
+  mb-[8px]
+}
+
+.regulations > .regulation > span,
+.rule .definition > span {
+  color: #636363;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.regulations p,
+.rules p {
+  display: contents;
+  color: #636363;
+  font-family: 'Pinar FD VF';
+  line-height: normal;
+}
+
+.rulesSection > h3 {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .abstract {
+  color: #636363;
+  text-align: justify;
+  line-height: normal;
+}
+
+.definitions > h2 {
+  font-size: 20px;
+  font-weight: 700;
+  @apply text-black
+  sm:text-[16px]
+  mb-[8px];
+}
+
+.definitions p {
+  color: #636363;
+  line-height: normal;
+  display: contents;
+}
+
+.definitions > ul {
+  line-height: normal;
+}
+
+.definition > .title {
+  color: #636363;
+  font-weight: 700;
+  line-height: normal;
+  @apply whitespace-nowrap;
 }
 
 .playingRulesWrapper .rules {
   width: 100%;
-  
 }
 
-.playingRulesWrapper .rules ul {
+.playingRulesWrapper .rules .ruleslist {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: 12px;
+  gap: 32px;
 }
 
-.playingRulesWrapper .rules ul li {
+.playingRulesWrapper .rules .ruleslist > li {
   width: 100%;
   display: flex;
   align-items: flex-start;
@@ -44,22 +138,28 @@
   gap: 8px;
 }
 
-.playingRulesWrapper .rules ul li .title {
+.playingRulesWrapper .rules .ruleslist > li .title {
   font-size: 20px;
   font-weight: 700;
-  @apply
-  text-black
-  sm:text-[16px]
+  @apply text-black
+  mb-[8px]
+  sm:text-[16px];
 }
 
-.playingRulesWrapper .rules ul li .explain {
+.playingRulesWrapper .rules .ruleslist > li .explain {
   color: #636363;
   font-size: 16px;
   font-family: "pinar fd vf";
   font-weight: 400;
-  line-height: 35px;
-  
-  @apply
-  sm:text-[12px]
-  sm:leading-[20px]
+  text-align: justify;
+  line-height: normal;
+
+  @apply sm:text-[12px]
+  sm:leading-[20px];
 }
+
+.explain > li {
+  display: list-item;
+  list-style-type: decimal;
+  margin-right: 19px;
+} */

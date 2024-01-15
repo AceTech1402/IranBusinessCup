@@ -48,3 +48,24 @@ export interface ServiceType {
   title: string;
   description: string;
 }
+
+export interface RegulationType {
+  id: string;
+  title: string;
+  body?: {
+    id: string;
+    title: string;
+    text: string;
+  }[];
+  extraTxt?: string[];
+}
+
+export interface RuleType {
+  id: string;
+  title: string;
+  text?: string[];
+  definition?: {
+    title: string;
+    description: string;
+  };
+}
