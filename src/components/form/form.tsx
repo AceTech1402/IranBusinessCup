@@ -2,13 +2,16 @@ import Button from "../button/button";
 import styles from "./form.module.css";
 import { useForm } from "react-hook-form";
 
-
 import ShapeZarbdarImage from "./../../assets/images/home/Group 46.svg";
 import { NavLink } from "react-router-dom";
 
 import useRegister from "./../../Hooks/Request/useRegister";
 import Loading from "../Loading/loading";
 import Popup from "../popup/popup";
+import { Link } from "react-router-dom";
+import { useState } from "react";
+import { UploadModal } from "../modal/upload-modal/uploadModal";
+import { SuccessModalUpload } from "../modal/success-modal-upload/successModalUpload";
 
 interface FormDataType {
   Firstname: string;
@@ -20,7 +23,7 @@ interface FormDataType {
   AccessPrivacy: boolean;
 }
 
-const Form = () => {
+const Form: React.FC = () => {
   const email_regular =
     /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
@@ -29,6 +32,8 @@ const Form = () => {
     handleSubmit,
     formState: { errors },
   } = useForm<FormDataType>();
+
+  const [statusModal, setStatusModal] = useState<boolean>(false);
 
   const {
     handle_register,
@@ -50,6 +55,14 @@ const Form = () => {
     };
     handle_register(dataForm);
   };
+
+  const showModal = () => {
+    setStatusModal(true)
+  }
+  const closeModal = () => {
+    setStatusModal(false)
+  }
+
   return (
     <>
       <Popup
@@ -58,6 +71,7 @@ const Form = () => {
         message={message}
         changeShowPopupStatus={changeShowPopupStatus}
       />
+      <UploadModal statusModal={statusModal} closeModal={closeModal} />
       <div className={`${styles.form} shape-box small`} id="register">
         <div className={styles.formTitle}>
           <img src={ShapeZarbdarImage} />
@@ -154,18 +168,17 @@ const Form = () => {
                   className={styles.borderCheckInput}
                   {...register("AccessPrivacy", {
                     validate: (value) =>
-                      value === false ? "لطفا قوانین ما را قبول کنید" : undefined,
+                      value === false
+                        ? "لطفا قوانین ما را قبول کنید"
+                        : undefined,
                   })}
                 />
                 <div className={styles.checkbox}></div>
                 <div className={styles.text}>
                   <p>
-                    <NavLink
-                      to="#"
-                      className={styles.textBlue}
-                    >
+                    <Link to="/register-rules" className={styles.textBlue}>
                       <span>قوانین ثبت نام ایران بیزنس کاپ </span>
-                    </NavLink>
+                    </Link>
                     را خواندم و با آن موافقم.
                   </p>
                 </div>
@@ -189,6 +202,24 @@ const Form = () => {
             </Button>
           </div>
         </form>
+
+        {/* upload recived */}
+        <div className={styles.uploadRecived}>
+          <div className={styles.textWrapper}>
+            <div className={styles.title}>
+              <p>بارگذاری رسید واریزی</p>
+            </div>
+            <div className={styles.explian}>
+              <p>
+                روی “دکمه بارگزاری رسید” را کلید کرده و همراه با وارد نمودن نام
+                شرکت خود رسید خود را بارگذاری نمایید.
+              </p>
+            </div>
+          </div>
+          <button className={styles.button} onClick={() => showModal()}>
+            <p>بارگذاری رسید</p>
+          </button>
+        </div>
       </div>
     </>
   );

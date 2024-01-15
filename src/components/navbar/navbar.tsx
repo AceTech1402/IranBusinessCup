@@ -82,12 +82,12 @@ const Navbar = () => {
                 </NavLink>
               </li>
               <li>
-                <Link
+                <NavLink
                   to="/playing-rules"
-                  // className={({ isActive }) => {
-                  //   return isActive ? styles.active : "";
-                  // }}
-                  // onClick={() => toggleStatusMenu()}
+                  className={({ isActive }) => {
+                    return isActive ? styles.active : "";
+                  }}
+                  onClick={() => toggleStatusMenu()}
                 >
                   <div className={styles.image}>
                     <svg
@@ -174,15 +174,15 @@ const Navbar = () => {
                     </svg>
                   </div>
                   <p>قوانین بازی</p>
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link
+                <NavLink
                   to="/register-rules"
-                  // className={({ isActive }) => {
-                  //   return isActive ? styles.active : "";
-                  // }}
-                  // onClick={() => toggleStatusMenu()}
+                  className={({ isActive }) => {
+                    return isActive ? styles.active : "";
+                  }}
+                  onClick={() => toggleStatusMenu()}
                 >
                   <div className={styles.image}>
                     <svg
@@ -269,7 +269,7 @@ const Navbar = () => {
                     </svg>
                   </div>
                   <p>قوانین ثبت نام</p>
-                </Link>
+                </NavLink>
               </li>
               {/* <li className={`${styles.last}`}>
                 <HashLink

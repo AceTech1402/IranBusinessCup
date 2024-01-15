@@ -36,8 +36,8 @@ const ItemsFooter: ItemsFooterType[] = [
     id: 2,
     title: "Über die Business League",
     items: [
-      { id: 1, text: "قوانین بازی"},
-      { id: 2, text: "قوانین ثبت نام"},
+      { id: 1, text: "قوانین بازی", link: "/playing-rules" },
+      { id: 2, text: "قوانین ثبت نام", link: "/register-rules" },
     ],
   },
 ];
@@ -77,7 +77,9 @@ const Footer = () => {
                   {text.link ? (
                     <NavLink
                       to={text.link}
-                      className={({ isActive }) => (isActive ? classes.active : "")}
+                      className={({ isActive }) =>
+                        isActive ? classes.active : ""
+                      }
                     >
                       {text.text}
                     </NavLink>
