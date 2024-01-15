@@ -13,6 +13,7 @@ export const UploadModal: React.FC<PropsUploadMoadDataType> = ({
   closeModal,
 }) => {
   const [modalSuccessStatus, setModalSuccessStatus] = useState<boolean>(false);
+  const [uplaodImage, setUploadImage] = useState<string | null>(null);
 
   const openModal = () => {
     setModalSuccessStatus(true);
@@ -55,7 +56,25 @@ export const UploadModal: React.FC<PropsUploadMoadDataType> = ({
                 <p>(کمتر از 5mb)</p>
               </div>
               <div className={classes.upload}>
-                <input type="file" />
+                <input
+                  type="file"
+                  onChange={(e: any) => {
+                    setUploadImage(URL.createObjectURL(e.target.files[0]));
+                  }}
+                />
+                {uplaodImage && (
+                  <div className={classes.image}>
+                    <img src={uplaodImage} alt="" />
+                  </div>
+                )}
+                {uplaodImage && (
+                  <div
+                    className={classes.changeImage}
+                    onClick={() => setUploadImage(null)}
+                  >
+                    <PlusIcon />
+                  </div>
+                )}
                 <div className={classes.icon}>
                   <PlusIcon />
                 </div>
