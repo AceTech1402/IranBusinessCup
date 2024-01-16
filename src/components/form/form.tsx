@@ -6,7 +6,6 @@ import ShapeZarbdarImage from "./../../assets/images/home/Group 46.svg";
 
 import useRegister from "./../../Hooks/Request/useRegister";
 import Loading from "../Loading/loading";
-import Popup from "../popup/popup";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { UploadModal } from "../modal/upload-modal/uploadModal";

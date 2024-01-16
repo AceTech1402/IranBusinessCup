@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { PlusIcon } from "../../svgs/svgs";
-import { SuccessModalUpload } from "../success-modal-upload/successModalUpload";
 import classes from "./uploadModal.module.css";
 import { SuccessMessageRegister } from "../success-message-register/successMessageRegister";
 import { useForm } from "react-hook-form";
@@ -29,10 +28,6 @@ export const UploadModal: React.FC<PropsUploadMoadDataType> = ({
     register,
     formState: { errors },
   } = useForm<FormDataType>();
-
-  const openModal = () => {
-    setModalSuccessStatus(true);
-  };
 
   const closeModalSuccess = () => {
     setModalSuccessStatus(false);
