@@ -65,12 +65,41 @@
   line-height: normal;
 }
 
-.rulesSection > h3 {
-
+.rulesSection > .foulSection,
+.rulesSection > .sackSection {
+  color: #636363;
+  line-height: normal;
+  @apply
+  mb-[32px]
 }
 
+.rulesSection > .foulSection .bold,
+.rulesSection > .sackSection .bold {
+  font-weight: 700;
+  line-height: normal;
+  color: #636363;
+}
 
+.fouls,
+.sacks {
+  list-style-position: inside;
+}
 
+.foul,
+.sack {
+  list-style-type: disc;
+}
+
+.foul::marker,
+.sack::marker {
+  font-size: 10px;
+  color: #636363;
+}
+
+.footnote {
+  @apply
+  mt-[64px]
+}
 
 
 
