@@ -57,11 +57,11 @@ const Form: React.FC = () => {
   };
 
   const showModal = () => {
-    setStatusModal(true)
-  }
+    setStatusModal(true);
+  };
   const closeModal = () => {
-    setStatusModal(false)
-  }
+    setStatusModal(false);
+  };
 
   return (
     <>
@@ -72,6 +72,7 @@ const Form: React.FC = () => {
         changeShowPopupStatus={changeShowPopupStatus}
       />
       <UploadModal statusModal={statusModal} closeModal={closeModal} />
+      <SuccessModalUpload closeModal={closeModal} closeModalSuccess={close} />
       <div className={`${styles.form} shape-box small`} id="register">
         <div className={styles.formTitle}>
           <img src={ShapeZarbdarImage} />
@@ -204,7 +205,7 @@ const Form: React.FC = () => {
         </form>
 
         {/* upload recived */}
-        <div className={styles.uploadRecived}>
+        <form className={styles.uploadRecived}>
           <div className={styles.textWrapper}>
             <div className={styles.title}>
               <p>بارگذاری رسید واریزی</p>
@@ -216,10 +217,16 @@ const Form: React.FC = () => {
               </p>
             </div>
           </div>
-          <button className={styles.button} onClick={() => showModal()}>
+          <button
+            className={styles.button}
+            onClick={(e) => {
+              e.preventDefault();
+              showModal();
+            }}
+          >
             <p>بارگذاری رسید</p>
           </button>
-        </div>
+        </form>
       </div>
     </>
   );

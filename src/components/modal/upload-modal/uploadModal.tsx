@@ -2,6 +2,7 @@ import { useState } from "react";
 import { PlusIcon } from "../../svgs/svgs";
 import { SuccessModalUpload } from "../success-modal-upload/successModalUpload";
 import classes from "./uploadModal.module.css";
+import { SuccessMessageRegister } from "../success-message-register/successMessageRegister";
 
 interface PropsUploadMoadDataType {
   statusModal: boolean;
@@ -25,7 +26,12 @@ export const UploadModal: React.FC<PropsUploadMoadDataType> = ({
 
   return (
     <>
-      <SuccessModalUpload
+      {/* <SuccessModalUpload
+        closeModal={closeModal}
+        closeModalSuccess={closeModalSuccess}
+        modalSuccessStatus={modalSuccessStatus}
+      /> */}
+      <SuccessMessageRegister
         closeModal={closeModal}
         closeModalSuccess={closeModalSuccess}
         modalSuccessStatus={modalSuccessStatus}
