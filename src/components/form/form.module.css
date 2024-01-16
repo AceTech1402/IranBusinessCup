@@ -6,6 +6,7 @@
   font-family: "pinar FD VF";
   font-weight: 800;
   @apply flex gap-[27px] sm:gap-[14px] sm:justify-between sm:w-full
+  max-w-[735px]
 }
 
 .formTitle img {
@@ -21,7 +22,7 @@
 }
 
 .inputsWrapper {
-  @apply flex flex-col pt-11 gap-5 max-w-[836px] w-[100%]
+  @apply flex flex-col pt-11 gap-5 max-w-[735px] w-[100%]
 }
 
 .input {
@@ -38,6 +39,21 @@
 
 .borderInput:focus {
   @apply border-priary
+}
+
+.uploadingSection .upperPart {
+  @apply
+  flex
+  justify-between
+  gap-[25px]
+  mb-[16px]
+}
+
+.upperPart > .uploadBox {
+  @apply
+  w-[104px]
+  h-[104px]
+  bg-darkGray
 }
 
 .checkInput {
@@ -97,7 +113,7 @@
 }
 
 .uploadRecived {
-  @apply w-full max-w-[835px] flex items-center justify-between gap-5 flex-wrap
+  @apply w-full max-w-[735px] flex items-center justify-between gap-5 flex-wrap
 }
 
 .uploadRecived button {
@@ -105,7 +121,7 @@
 }
 
 .uploadRecived .textWrapper {
-  @apply w-full max-w-[563px] flex flex-col items-start justify-start gap-2
+  @apply w-full max-w-[540px] flex flex-col items-start justify-start gap-2
 }
 
 .uploadRecived .textWrapper .title {
