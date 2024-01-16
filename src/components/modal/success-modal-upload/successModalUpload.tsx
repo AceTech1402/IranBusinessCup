@@ -11,6 +11,7 @@ export const SuccessModalUpload: React.FC<PropsModal> = ({
   closeModal,
   modalSuccessStatus,
 }) => {
+
   return (
     <div
       className={`${classes.successModalUploadWrapper} ${
@@ -34,7 +35,10 @@ export const SuccessModalUpload: React.FC<PropsModal> = ({
             ثبت نام اولیه شما انجام شد. برای تکمیل و نهایی شدن ثبت نام هزینه
             ورودی را به مبلغ
           </p>
-          <p className={classes.center}> 50.000.000 تومان (پنجاه میلیون تومان) </p>
+          <p className={classes.center}>
+            {" "}
+            50.000.000 تومان (پنجاه میلیون تومان){" "}
+          </p>
           <p>
             به حساب بانک پاسارگاد{" "}
             <strong>شرکت ایده پردازان نیکداد اروین</strong> واریز نمایید تا ثبت

@@ -12,15 +12,13 @@ const useUploadFile = () => {
   const [sending, setSending] = useState(false);
   const [message, setMessage] = useState("");
   const [result_req, setResult_req] = useState(0);
-  const [showPopup, setShowPopup] = useState(false);
+  const [showPopup, setShowPopup] = useState<boolean>(false);
 
   const changeShowPopupStatus = () => {
     setShowPopup(false);
   };
 
-  const handle_register = async ({company_name,
-    file,
-  }: FormDataType) => {
+  const handle_register = async ({ company_name, file }: FormDataType) => {
     const formData = new FormData();
     formData.append("company_name", company_name);
     file && formData.append("file", file);
@@ -34,15 +32,12 @@ const useUploadFile = () => {
           },
         })
         .then((res: any) => {
-          if (res.result) {
-            if (res.data.data.email_error_msg !== "") {
-              setSending(false);
-              if (res.data.data) {
-                setMessage(res.data.data.message);
-                setResult_req(1);
-                setShowPopup(true);
-              }
-            } else {
+          if (res.status == 200) {
+            setSending(false);
+            if (res.data.data) {
+              setMessage(res.data.data.message);
+              setResult_req(1);
+              setShowPopup(true);
               setSending(false);
               if (res.data.data) {
                 setMessage(res.data.data.message);

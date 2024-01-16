@@ -8,10 +8,11 @@ import useRegister from "./../../Hooks/Request/useRegister";
 import Loading from "../Loading/loading";
 import Popup from "../popup/popup";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { UploadModal } from "../modal/upload-modal/uploadModal";
 import { SuccessModalUpload } from "../modal/success-modal-upload/successModalUpload";
 import { PlusIcon } from "../svgs/svgs";
+import { SuccessMessageRegister } from "../modal/success-message-register/successMessageRegister";
 
 interface FormDataType {
   Firstname: string;
@@ -37,19 +38,11 @@ const Form: React.FC = () => {
   const [statusModal, setStatusModal] = useState<boolean>(false);
   const [modalSuccessStatus, setModalSuccessStatus] = useState<boolean>(false);
   const [uplaodImage, setUploadImage] = useState<any | null>(null);
+  const [modalSuccessFinishedStatus, setModalSuccessFinishedStatus] =
+    useState<boolean>(false);
 
-  console.log("====================================");
-  console.log(uplaodImage);
-  console.log("====================================");
-
-  const {
-    handle_register,
-    sending,
-    result_req,
-    showPopup,
-    message,
-    changeShowPopupStatus,
-  } = useRegister();
+  const { handle_register, sending, showPopup, changeShowPopupStatus } =
+    useRegister();
 
   const submitForm = async (data: any) => {
     let dataForm = {
@@ -61,7 +54,7 @@ const Form: React.FC = () => {
       address: data.address,
       file: data.file,
     };
-    handle_register(dataForm);
+    await handle_register(dataForm);
   };
 
   const showModal = () => {
@@ -70,17 +63,37 @@ const Form: React.FC = () => {
   const closeModal = () => {
     setStatusModal(false);
     setModalSuccessStatus(false);
+    setModalSuccessFinishedStatus(false);
+    changeShowPopupStatus();
   };
+
+  const closeSuccessFinishedModal = () => {
+    setModalSuccessFinishedStatus(false);
+    changeShowPopupStatus();
+  };
+
+  useEffect(() => {
+    if (uplaodImage) {
+      setModalSuccessFinishedStatus(showPopup);
+    } else {
+      setModalSuccessStatus(showPopup);
+    }
+  }, [showPopup, uplaodImage]);
 
   return (
     <>
-      <Popup
+      {/* <Popup
         showPopup={showPopup}
         result_req={result_req}
         message={message}
         changeShowPopupStatus={changeShowPopupStatus}
-      />
+      /> */}
       <UploadModal statusModal={statusModal} closeModal={closeModal} />
+      <SuccessMessageRegister
+        closeModal={closeModal}
+        closeModalSuccess={closeSuccessFinishedModal}
+        modalSuccessStatus={modalSuccessFinishedStatus}
+      />
       <SuccessModalUpload
         closeModal={closeModal}
         closeModalSuccess={close}
@@ -271,7 +284,7 @@ const Form: React.FC = () => {
             </div>
             <div className={classes.explian}>
               <p>
-                روی “دکمه بارگزاری رسید” را کلید کرده و همراه با وارد نمودن نام
+                روی دکمه “بارگزاری رسید” کلید کرده و همراه با وارد نمودن نام
                 شرکت خود رسید خود را بارگذاری نمایید.
               </p>
             </div>

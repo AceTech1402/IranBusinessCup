@@ -50,22 +50,11 @@ const useRegister = () => {
           },
         })
         .then((res: any) => {
-          if (res.result) {
-            if (res.data.data.email_error_msg !== "") {
-              setSending(false);
-              if (res.data.data) {
-                setMessage(res.data.data.message);
-                setResult_req(1);
-                setShowPopup(true);
-              }
-            } else {
-              setSending(false);
-              if (res.data.data) {
-                setMessage(res.data.data.message);
-                setResult_req(res.data.data.email_sended ? 1 : 0);
-                setShowPopup(true);
-              }
-            }
+          if (res.status === 200) {
+            setSending(false);
+            setMessage(res.data.data.message);
+            setResult_req(1);
+            setShowPopup(true);
           }
         })
         .catch((e) => {

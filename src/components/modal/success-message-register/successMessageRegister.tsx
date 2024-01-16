@@ -11,6 +11,7 @@ export const SuccessMessageRegister: React.FC<PropsModal> = ({
   closeModal,
   modalSuccessStatus,
 }) => {
+
   return (
     <div
       className={`${classes.successModalUploadWrapper} ${

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { PlusIcon } from "../../svgs/svgs";
 import { SuccessModalUpload } from "../success-modal-upload/successModalUpload";
 import classes from "./uploadModal.module.css";
@@ -38,19 +38,25 @@ export const UploadModal: React.FC<PropsUploadMoadDataType> = ({
     setModalSuccessStatus(false);
   };
 
-  const { changeShowPopupStatus, handle_register, message, sending } =
-    useUploadFile();
+  const { handle_register, sending, showPopup } = useUploadFile();
 
-  const submitFormUpload = (data: FormDataType) => {
-    handle_register({ company_name: data.company_name, file: uplaodImage });
+  const submitFormUpload = async (data: FormDataType) => {
+    await handle_register({
+      company_name: data.company_name,
+      file: uplaodImage,
+    });
   };
+
+  useEffect(() => {
+    setModalSuccessStatus(showPopup);
+  }, [showPopup]);
 
   return (
     <>
       {/* <SuccessModalUpload
         closeModal={closeModal}
         closeModalSuccess={closeModalSuccess}
-        modalSuccessStatus={modalSuccessStatus}
+        modalSuccessStatus={showPopup}
       /> */}
       <SuccessMessageRegister
         closeModal={closeModal}
