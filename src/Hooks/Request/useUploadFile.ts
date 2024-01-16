@@ -4,16 +4,11 @@ import BASE_URL from "../../contants/baseUrl";
 import apis from "../../contants/apis";
 
 interface FormDataType {
-  f_name: string;
-  l_name: string;
-  email: string;
-  address: string;
-  mobile: string;
   company_name: string;
   file?: File | null;
 }
 
-const useRegister = () => {
+const useUploadFile = () => {
   const [sending, setSending] = useState(false);
   const [message, setMessage] = useState("");
   const [result_req, setResult_req] = useState(0);
@@ -23,28 +18,17 @@ const useRegister = () => {
     setShowPopup(false);
   };
 
-  const handle_register = async ({
-    f_name,
-    l_name,
-    email,
-    address,
-    mobile,
-    company_name,
+  const handle_register = async ({company_name,
     file,
   }: FormDataType) => {
     const formData = new FormData();
-    formData.append("f_name", f_name);
-    formData.append("l_name", l_name);
-    formData.append("address", address);
-    formData.append("email", email);
     formData.append("company_name", company_name);
-    formData.append("mobile", mobile);
     file && formData.append("file", file);
 
     try {
       setSending(true);
       await axios
-        .post(`${BASE_URL}${apis.addRequestIranbusinesscup}`, formData, {
+        .post(`${BASE_URL}${apis.uploadFileIranbusinesscup}`, formData, {
           headers: {
             Accept: "application/json, text/plain, */*",
           },
@@ -92,4 +76,4 @@ const useRegister = () => {
   };
 };
 
-export default useRegister;
+export default useUploadFile;

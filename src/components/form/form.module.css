@@ -5,7 +5,7 @@
 .formTitle {
   font-family: "pinar FD VF";
   font-weight: 800;
-  @apply flex gap-[27px] sm:gap-[14px] sm:justify-between sm:w-full
+  @apply flex gap-[27px] sm:gap-[14px] sm:justify-between sm:w-full max-w-[735px]
 }
 
 .formTitle img {
@@ -21,7 +21,7 @@
 }
 
 .inputsWrapper {
-  @apply flex flex-col pt-11 gap-5 max-w-[836px] w-[100%]
+  @apply flex flex-col pt-11 gap-5 max-w-[735px] w-[100%] xs:pt-0
 }
 
 .input {
@@ -38,6 +38,105 @@
 
 .borderInput:focus {
   @apply border-priary
+}
+
+.uploadingSection .upperPart {
+  @apply flex justify-between gap-[25px] mb-[16px]
+}
+
+.uploadingSection .upperPart .upload {
+  position: relative;
+  min-width: 104px;
+  width: 104px;
+  height: 104px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+  border: 1px dashed #D0D5DD;
+  border-radius: 5px;
+  background-color: #FAFAFA;
+  padding: 2px;
+}
+
+.uploadingSection .upperPart .upload .image {
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  z-index: 1;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.uploadingSection .upperPart .upload .changeImage {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  z-index: 2;
+  border: 1px solid #860505;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  cursor: pointer;
+  transform: rotate(-45deg);
+}
+
+.uploadingSection .upperPart .upload:hover .image::after {
+  content: "";
+  backdrop-filter: blur(4px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.uploadingSection .upperPart .upload:hover .changeImage {
+  display: flex;
+}
+
+.uploadingSection .upperPart .upload .changeImage svg path {
+  stroke: #860505;
+}
+
+.uploadingSection .upperPart .upload .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.uploadingSection .upperPart .upload input {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.uploadingSection .upperPart .upload .icon {
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.uploadingSection .upperPart>p {
+  @apply md:max-w-[54vw] xs:max-w-[190px]
+}
+
+.upperPart>.uploadBox {
+  @apply w-[104px] h-[104px] bg-darkGray
 }
 
 .checkInput {
@@ -97,7 +196,7 @@
 }
 
 .uploadRecived {
-  @apply w-full max-w-[835px] flex items-center justify-between gap-5 flex-wrap
+  @apply w-full max-w-[735px] flex items-center justify-between gap-5 flex-wrap xs:mt-[66px]
 }
 
 .uploadRecived button {
@@ -105,7 +204,7 @@
 }
 
 .uploadRecived .textWrapper {
-  @apply w-full max-w-[563px] flex flex-col items-start justify-start gap-2
+  @apply w-full max-w-[540px] flex flex-col items-start justify-start gap-2
 }
 
 .uploadRecived .textWrapper .title {
@@ -128,6 +227,7 @@
   font-size: 16px;
   font-weight: 700;
   transition: .3s;
+  gap: 8px;
   @apply w-full max-w-[156px] h-[42px] bg-priary text-white flex items-center justify-center rounded-lg text-center
 }
 

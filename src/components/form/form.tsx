@@ -1,9 +1,8 @@
 import Button from "../button/button";
-import styles from "./form.module.css";
+import classes from "./form.module.css";
 import { useForm } from "react-hook-form";
 
 import ShapeZarbdarImage from "./../../assets/images/home/Group 46.svg";
-import { NavLink } from "react-router-dom";
 
 import useRegister from "./../../Hooks/Request/useRegister";
 import Loading from "../Loading/loading";
@@ -12,6 +11,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { UploadModal } from "../modal/upload-modal/uploadModal";
 import { SuccessModalUpload } from "../modal/success-modal-upload/successModalUpload";
+import { PlusIcon } from "../svgs/svgs";
 
 interface FormDataType {
   Firstname: string;
@@ -21,6 +21,7 @@ interface FormDataType {
   mobile: string;
   address: string;
   AccessPrivacy: boolean;
+  file?: File | null;
 }
 
 const Form: React.FC = () => {
@@ -34,6 +35,12 @@ const Form: React.FC = () => {
   } = useForm<FormDataType>();
 
   const [statusModal, setStatusModal] = useState<boolean>(false);
+  const [modalSuccessStatus, setModalSuccessStatus] = useState<boolean>(false);
+  const [uplaodImage, setUploadImage] = useState<any | null>(null);
+
+  console.log("====================================");
+  console.log(uplaodImage);
+  console.log("====================================");
 
   const {
     handle_register,
@@ -52,6 +59,7 @@ const Form: React.FC = () => {
       email: data.Email,
       mobile: data.mobile,
       address: data.address,
+      file: data.file,
     };
     handle_register(dataForm);
   };
@@ -61,6 +69,7 @@ const Form: React.FC = () => {
   };
   const closeModal = () => {
     setStatusModal(false);
+    setModalSuccessStatus(false);
   };
 
   return (
@@ -72,60 +81,64 @@ const Form: React.FC = () => {
         changeShowPopupStatus={changeShowPopupStatus}
       />
       <UploadModal statusModal={statusModal} closeModal={closeModal} />
-      <SuccessModalUpload closeModal={closeModal} closeModalSuccess={close} />
-      <div className={`${styles.form} shape-box small`} id="register">
-        <div className={styles.formTitle}>
+      <SuccessModalUpload
+        closeModal={closeModal}
+        closeModalSuccess={close}
+        modalSuccessStatus={modalSuccessStatus}
+      />
+      <div className={`${classes.form} shape-box small`} id="register">
+        <div className={classes.formTitle}>
           <img src={ShapeZarbdarImage} />
-          <h1 className={styles.register}>ثبت نام</h1>
+          <h1 className={classes.register}>ثبت نام</h1>
           <img src={ShapeZarbdarImage} />
         </div>
         <form
-          className={styles.inputsWrapper}
+          className={classes.inputsWrapper}
           onSubmit={handleSubmit(submitForm)}
         >
-          <div className={styles.twoColumn}>
-            <div className={styles.input}>
-              <label className={styles.label}>نام</label>
+          <div className={classes.twoColumn}>
+            <div className={classes.input}>
+              <label className={classes.label}>نام</label>
               <input
                 type="text"
-                className={styles.borderInput}
+                className={classes.borderInput}
                 {...register("Firstname", {
                   required: "لطفا نام خود را وارد کنید",
                 })}
               />
-              <p className={styles.para}>{errors.Firstname?.message}</p>
+              <p className={classes.para}>{errors.Firstname?.message}</p>
             </div>
-            <div className={styles.input}>
-              <label className={styles.label}>نام خانوادگی</label>
+            <div className={classes.input}>
+              <label className={classes.label}>نام خانوادگی</label>
               <input
                 type="text"
-                className={styles.borderInput}
+                className={classes.borderInput}
                 {...register("Lastname", {
                   required: "لطفا نام  خانوادگی را وارد کنید",
                 })}
               />
-              <p className={styles.para}>{errors.Lastname?.message}</p>
+              <p className={classes.para}>{errors.Lastname?.message}</p>
             </div>
           </div>
-          <div className={styles.oneColumn}>
-            <div className={styles.input}>
-              <label className={styles.label}>نام شرکت</label>
+          <div className={classes.oneColumn}>
+            <div className={classes.input}>
+              <label className={classes.label}>نام شرکت</label>
               <input
                 type="text"
-                className={styles.borderInput}
+                className={classes.borderInput}
                 {...register("Companyname", {
                   required: "لطفا نام شرکت خود را وارد کنید",
                 })}
               />
-              <p className={styles.para}>{errors.Companyname?.message}</p>
+              <p className={classes.para}>{errors.Companyname?.message}</p>
             </div>
           </div>
-          <div className={styles.twoColumn}>
-            <div className={styles.input}>
-              <label className={styles.label}>ایمیل</label>
+          <div className={classes.twoColumn}>
+            <div className={classes.input}>
+              <label className={classes.label}>ایمیل</label>
               <input
                 type="text"
-                className={styles.borderInput}
+                className={classes.borderInput}
                 {...register("Email", {
                   required: "لطفا ایمیل خود را وارد کنید",
                   pattern: {
@@ -134,39 +147,85 @@ const Form: React.FC = () => {
                   },
                 })}
               />
-              <p className={styles.para}>{errors.Email?.message}</p>
+              <p className={classes.para}>{errors.Email?.message}</p>
             </div>
-            <div className={styles.input}>
-              <label className={styles.label}>شماره تماس</label>
+            <div className={classes.input}>
+              <label className={classes.label}>شماره تماس</label>
               <input
                 type="text"
-                className={styles.borderInput}
+                className={classes.borderInput}
                 {...register("mobile", {
                   required: "لطفا شماره تماس خود را وارد کنید",
                 })}
               />
-              <p className={styles.para}>{errors.mobile?.message}</p>
+              <p className={classes.para}>{errors.mobile?.message}</p>
             </div>
           </div>
-          <div className={styles.oneColumn}>
-            <div className={styles.input}>
-              <label className={styles.label}>ادرس شرکت</label>
+          <div className={classes.oneColumn}>
+            <div className={classes.input}>
+              <label className={classes.label}>ادرس شرکت</label>
               <input
                 type="text"
-                className={styles.borderInput}
+                className={classes.borderInput}
                 {...register("address", {
                   required: "لطفا ادرس شرکت خود را وارد کنید",
                 })}
               />
-              <p className={styles.para}>{errors.address?.message}</p>
+              <p className={classes.para}>{errors.address?.message}</p>
             </div>
           </div>
-          <div className={styles.checkButton}>
-            <div className={styles.checkInput}>
-              <div className={styles.checkbox_wrapper}>
+          <div className={classes.uploadingSection}>
+            <div className={classes.upperPart}>
+              <p>
+                تصویر رسید واریزی هزینه ثبت نام در تورنمنت ایران بیزینس کاپ را
+                بارگذاری کنید. (کمتر از 5mb)
+              </p>
+              <div className={classes.upload}>
+                <input
+                  {...register("file")}
+                  type="file"
+                  onChange={(e: any) => {
+                    setUploadImage(e.target.files[0]);
+                  }}
+                  accept=".jpg, .png, .jpeg, .gif, .bmp, .tif, .tiff|image/*"
+                />
+                {uplaodImage && (
+                  <div className={classes.image}>
+                    <img src={URL.createObjectURL(uplaodImage)} alt="" />
+                  </div>
+                )}
+                {uplaodImage ? (
+                  <div
+                    className={classes.changeImage}
+                    onClick={() => setUploadImage(null)}
+                  >
+                    <PlusIcon />
+                  </div>
+                ) : (
+                  <>
+                    <div className={classes.icon}>
+                      <PlusIcon />
+                    </div>
+                    <div className={classes.text}>
+                      <p>بارگذاری</p>
+                    </div>
+                  </>
+                )}
+              </div>
+            </div>
+            <p>
+              * در صورتی که هزینه‌ی ثبت نام را در هنگام تکمیل فرم پرداخت
+              ننمودید، با کلیک روی دکمه “ثبت نام” ثبت نام اولیه خود را انجام
+              داده و در زمانی دیگر برای تکمیل فرایند، رسید خود را در بخش
+              “بارگذاری رسید واریزی” (بخش زیرین ) بارگذاری کنید.
+            </p>
+          </div>
+          <div className={classes.checkButton}>
+            <div className={classes.checkInput}>
+              <div className={classes.checkbox_wrapper}>
                 <input
                   type="checkbox"
-                  className={styles.borderCheckInput}
+                  className={classes.borderCheckInput}
                   {...register("AccessPrivacy", {
                     validate: (value) =>
                       value === false
@@ -174,17 +233,17 @@ const Form: React.FC = () => {
                         : undefined,
                   })}
                 />
-                <div className={styles.checkbox}></div>
-                <div className={styles.text}>
+                <div className={classes.checkbox}></div>
+                <div className={classes.text}>
                   <p>
-                    <Link to="/register-rules" className={styles.textBlue}>
+                    <Link to="/register-rules" className={classes.textBlue}>
                       <span>قوانین ثبت نام ایران بیزنس کاپ </span>
                     </Link>
                     را خواندم و با آن موافقم.
                   </p>
                 </div>
               </div>
-              <p className={styles.para}>{errors.AccessPrivacy?.message}</p>
+              <p className={classes.para}>{errors.AccessPrivacy?.message}</p>
             </div>
             <Button
               btnColor={"#21B891"}
@@ -194,7 +253,7 @@ const Form: React.FC = () => {
             >
               {sending ? (
                 <>
-                  <p>درحال ارسال ...</p>
+                  <p>درحال ارسال</p>
                   <Loading />
                 </>
               ) : (
@@ -205,12 +264,12 @@ const Form: React.FC = () => {
         </form>
 
         {/* upload recived */}
-        <form className={styles.uploadRecived}>
-          <div className={styles.textWrapper}>
-            <div className={styles.title}>
+        <form className={classes.uploadRecived}>
+          <div className={classes.textWrapper}>
+            <div className={classes.title}>
               <p>بارگذاری رسید واریزی</p>
             </div>
-            <div className={styles.explian}>
+            <div className={classes.explian}>
               <p>
                 روی “دکمه بارگزاری رسید” را کلید کرده و همراه با وارد نمودن نام
                 شرکت خود رسید خود را بارگذاری نمایید.
@@ -218,7 +277,7 @@ const Form: React.FC = () => {
             </div>
           </div>
           <button
-            className={styles.button}
+            className={classes.button}
             onClick={(e) => {
               e.preventDefault();
               showModal();

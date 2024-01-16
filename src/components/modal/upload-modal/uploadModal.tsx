@@ -3,10 +3,18 @@ import { PlusIcon } from "../../svgs/svgs";
 import { SuccessModalUpload } from "../success-modal-upload/successModalUpload";
 import classes from "./uploadModal.module.css";
 import { SuccessMessageRegister } from "../success-message-register/successMessageRegister";
+import { useForm } from "react-hook-form";
+import useUploadFile from "../../../Hooks/Request/useUploadFile";
+import Loading from "../../Loading/loading";
 
 interface PropsUploadMoadDataType {
   statusModal: boolean;
   closeModal: () => void;
+}
+
+interface FormDataType {
+  company_name: string;
+  file: File;
 }
 
 export const UploadModal: React.FC<PropsUploadMoadDataType> = ({
@@ -14,7 +22,13 @@ export const UploadModal: React.FC<PropsUploadMoadDataType> = ({
   closeModal,
 }) => {
   const [modalSuccessStatus, setModalSuccessStatus] = useState<boolean>(false);
-  const [uplaodImage, setUploadImage] = useState<string | null>(null);
+  const [uplaodImage, setUploadImage] = useState<any | null>(null);
+
+  const {
+    handleSubmit,
+    register,
+    formState: { errors },
+  } = useForm<FormDataType>();
 
   const openModal = () => {
     setModalSuccessStatus(true);
@@ -22,6 +36,13 @@ export const UploadModal: React.FC<PropsUploadMoadDataType> = ({
 
   const closeModalSuccess = () => {
     setModalSuccessStatus(false);
+  };
+
+  const { changeShowPopupStatus, handle_register, message, sending } =
+    useUploadFile();
+
+  const submitFormUpload = (data: FormDataType) => {
+    handle_register({ company_name: data.company_name, file: uplaodImage });
   };
 
   return (
@@ -46,11 +67,21 @@ export const UploadModal: React.FC<PropsUploadMoadDataType> = ({
           <div className={classes.title}>
             <p>بارگذاری رسید واریزی</p>
           </div>
-          <form>
+          <form onSubmit={handleSubmit(submitFormUpload)}>
             <div className={classes.inputWrapper}>
               <label>
                 <span>نام شرکت</span>
-                <input type="text" />
+                <input
+                  {...register("company_name", {
+                    required: " لطفا این فیلد را کامل کنید.",
+                  })}
+                  type="text"
+                />
+                {errors.company_name?.message && (
+                  <span className={classes.error}>
+                    {errors.company_name?.message}
+                  </span>
+                )}
               </label>
             </div>
             <div className={classes.uploadWrapper}>
@@ -63,30 +94,40 @@ export const UploadModal: React.FC<PropsUploadMoadDataType> = ({
               </div>
               <div className={classes.upload}>
                 <input
+                  {...register("file", {
+                    required: " لطفا این فیلد را کامل کنید.",
+                  })}
                   type="file"
                   onChange={(e: any) => {
-                    setUploadImage(URL.createObjectURL(e.target.files[0]));
+                    setUploadImage(e.target.files[0]);
                   }}
+                  accept=".jpg, .png, .jpeg, .gif, .bmp, .tif, .tiff|image/*"
                 />
                 {uplaodImage && (
                   <div className={classes.image}>
-                    <img src={uplaodImage} alt="" />
+                    <img src={URL.createObjectURL(uplaodImage)} alt="" />
                   </div>
                 )}
-                {uplaodImage && (
+                {uplaodImage ? (
                   <div
                     className={classes.changeImage}
                     onClick={() => setUploadImage(null)}
                   >
                     <PlusIcon />
                   </div>
+                ) : (
+                  <>
+                    <div className={classes.icon}>
+                      <PlusIcon />
+                    </div>
+                    <div className={classes.text}>
+                      <p>بارگذاری</p>
+                    </div>
+                  </>
                 )}
-                <div className={classes.icon}>
-                  <PlusIcon />
-                </div>
-                <div className={classes.text}>
-                  <p>بارگذاری</p>
-                </div>
+                {errors.file?.message && (
+                  <span className={classes.error}>{errors.file?.message}</span>
+                )}
               </div>
             </div>
 
@@ -94,12 +135,19 @@ export const UploadModal: React.FC<PropsUploadMoadDataType> = ({
               <button
                 className={classes.accept}
                 type="submit"
-                onClick={(e) => {
-                  e.preventDefault();
-                  openModal();
-                }}
+                // onClick={(e) => {
+                //   e.preventDefault();
+                //   openModal();
+                // }}
               >
-                <p>تایید</p>
+                {sending ? (
+                  <>
+                    <p>درحال ارسال</p>
+                    <Loading />
+                  </>
+                ) : (
+                  <p>تایید</p>
+                )}
               </button>
               <button
                 className={classes.close}
