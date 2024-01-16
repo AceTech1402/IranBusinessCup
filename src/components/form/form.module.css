@@ -22,7 +22,7 @@
 }
 
 .inputsWrapper {
-  @apply flex flex-col pt-11 gap-5 max-w-[735px] w-[100%]
+  @apply flex flex-col pt-11 gap-5 max-w-[735px] w-[100%] xs:pt-0
 }
 
 .input {
@@ -47,6 +47,12 @@
   justify-between
   gap-[25px]
   mb-[16px]
+}
+
+.uploadingSection .upperPart > p {
+  @apply
+  md:max-w-[54vw]
+  xs:max-w-[190px]
 }
 
 .upperPart > .uploadBox {
@@ -113,7 +119,7 @@
 }
 
 .uploadRecived {
-  @apply w-full max-w-[735px] flex items-center justify-between gap-5 flex-wrap
+  @apply w-full max-w-[735px] flex items-center justify-between gap-5 flex-wrap xs:mt-[66px]
 }
 
 .uploadRecived button {

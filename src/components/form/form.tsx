@@ -162,7 +162,7 @@ const Form: React.FC = () => {
           </div>
           <div className={classes.uploadingSection}>
             <div className={classes.upperPart}>
-              <p>تصویر رسید واریزی هزینه ثبت نام در تورنومنت ایران بیزینس کاپ را بارگذاری کنید. (کمتر از 5mb)</p>
+              <p>تصویر رسید واریزی هزینه ثبت نام در تورنمنت ایران بیزینس کاپ را بارگذاری کنید. (کمتر از 5mb)</p>
               <span className={classes.uploadBox}></span>
             </div>
             <p>
